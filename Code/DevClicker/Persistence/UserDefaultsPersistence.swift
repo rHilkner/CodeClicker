@@ -8,10 +8,11 @@
 
 import Foundation
 
-class UserDefaultsServices {
+class UserDefaultsPersistence {
 
     static func save(game: Game) {
         guard let encodedPlayerStats = try? JSONEncoder().encode(game.playerStats),
+            let encodedProductionStats = try? JSONEncoder().encode(game.productionStats),
             let encodedMarketStats = try? JSONEncoder().encode(game.marketStats) else {
             print("-> ERROR: coudn't save game data to User Defaults")
             return
@@ -19,6 +20,7 @@ class UserDefaultsServices {
 
         print("-> INFO: Saving user data to User Defaults")
         UserDefaults.standard.set(encodedPlayerStats, forKey: "playerStats")
+        UserDefaults.standard.set(encodedProductionStats, forKey: "productionStats")
         UserDefaults.standard.set(encodedMarketStats, forKey: "marketStats")
     }
 
@@ -29,13 +31,19 @@ class UserDefaultsServices {
                 return Game()
         }
 
+        guard let productionData = UserDefaults.standard.data(forKey: "productionStats"),
+            let productionStats = try? JSONDecoder().decode(ProductionData.self, from: productionData) as ProductionData else {
+                print("-> ERROR: coudn't load market stats from User Defaults")
+                return Game()
+        }
+
         guard let marketData = UserDefaults.standard.data(forKey: "marketStats"),
             let marketStats = try? JSONDecoder().decode(MarketData.self, from: marketData) as MarketData else {
                 print("-> ERROR: coudn't load market stats from User Defaults")
                 return Game()
         }
 
-        let game = Game(playerStats: playerStats, marketStats: marketStats)
+        let game = Game(playerStats: playerStats, productionStats: productionStats, marketStats: marketStats)
         return game
     }
 

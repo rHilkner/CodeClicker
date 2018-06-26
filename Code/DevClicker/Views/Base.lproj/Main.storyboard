@@ -76,7 +76,7 @@
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="hireDevButtonPressed" destination="qem-2l-ync" eventType="touchUpInside" id="smw-yJ-bjy"/>
+                                                    <action selector="hireDevButtonPressed" destination="qem-2l-ync" eventType="touchUpInside" id="O0c-nK-xiQ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#devs: 1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ1-sQ-U8Z">
@@ -113,13 +113,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="QWs-fR-Dpq"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="+bizdev"/>
+                                                <state key="normal" title="+mktlvl"/>
                                                 <connections>
-                                                    <action selector="hireBizdevButtonPressed" destination="qem-2l-ync" eventType="touchUpInside" id="x6h-sJ-N9K"/>
+                                                    <action selector="upgradeMktButtonPressed" destination="qem-2l-ync" eventType="touchUpInside" id="uHG-bb-6x3"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#bizdevs: 1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-ax-whc">
-                                                <rect key="frame" x="36" y="127" width="117" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mkt lvl: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-ax-whc">
+                                                <rect key="frame" x="60.5" y="127" width="67" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -171,15 +171,15 @@
                                 <rect key="frame" x="85" y="369" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D$ 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nE4-QW-UZg">
-                                <rect key="frame" x="75" y="340" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nE4-QW-UZg">
+                                <rect key="frame" x="75" y="340" width="52" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D$ 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-Ba-yqu">
-                                <rect key="frame" x="266" y="340" width="56" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mkt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-Ba-yqu">
+                                <rect key="frame" x="266" y="340" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,10 +206,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Coding" id="60p-bG-eJ3"/>
                     <connections>
-                        <outlet property="bizdevsLabel" destination="9pY-ax-whc" id="gzU-KL-B9Y"/>
+                        <outlet property="coffeMktSlider" destination="tcH-SN-9Rf" id="rky-Qe-AN9"/>
                         <outlet property="dolLabel" destination="4BT-Ut-86K" id="WI8-b9-e1f"/>
                         <outlet property="locLabel" destination="CaS-g6-2PL" id="Jx3-cR-aXZ"/>
-                        <outlet property="locsPerSecLabel" destination="xZe-VO-bmf" id="onr-WF-Smb"/>
+                        <outlet property="locPerSecLabel" destination="xZe-VO-bmf" id="onr-WF-Smb"/>
+                        <outlet property="mktLvlLabel" destination="9pY-ax-whc" id="gzU-KL-B9Y"/>
                         <outlet property="numDevsLabel" destination="wJ1-sQ-U8Z" id="91d-Q8-32k"/>
                         <outlet property="sellPerSecLabel" destination="hWr-Iy-JeC" id="luD-qN-hSI"/>
                     </connections>

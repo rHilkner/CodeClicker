@@ -10,11 +10,18 @@ import Foundation
 
 class MarketServices {
 
-    // Return market demand in potencial of LoC selling per second (maximum value of LoC that the player can sell in 1 second)
-    static func calculateLocDemand(game: Game) -> Int {
-        let marketAtractiveness = game.marketStats.marketMultiplier * (game.marketStats.baseMarketAtractiveness/Double(game.playerStats.locPrice))
-        let locDemand = game.playerStats.bizdevs * Int(game.playerStats.bizdevsMultiplier * marketAtractiveness)
-
+    /// Return market demand in potencial of LoC selling per second (maximum value of LoC that the player can sell in 1 second)
+    static func calculateLocDemand() -> Int {
+        let playerStats = AppShared.game.playerStats
+        let marketStats = AppShared.game.marketStats
+        let locDemand = Int(marketStats.baseMarketAtractiveness * marketStats.marketMultiplier * (playerStats.coffeeMktRate) * 2.0 ^^ playerStats.marketingLevel)
         return locDemand
+    }
+
+    /// Calculates selling price of a LoC
+    static func calculateLocPrice() -> Double {
+        let marketStats = AppShared.game.marketStats
+        let sellPrice = marketStats.sellLocBasePrice * marketStats.sellLocPriceMultiplier
+        return sellPrice
     }
 }

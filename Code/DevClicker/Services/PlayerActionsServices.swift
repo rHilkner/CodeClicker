@@ -10,23 +10,42 @@ import Foundation
 
 class PlayerActionsServices {
 
-    static func codeLocTapped(_ game: Game) {
-        game.playerStats.locs += game.playerStats.locTapValue
+    static func codeLocTapped() {
+        let productionStats = AppShared.game.productionStats
+        let tapBase = productionStats.tapBase
+        let tapMultiplier = productionStats.tapMultiplier
+
+        let locProduced = Int(tapBase * tapMultiplier)
+        AppShared.game.playerStats.loc += locProduced
     }
 
-    static func hireDevTapped(_ game: Game) {
-        if game.playerStats.dols >= game.marketStats.devsPrice {
-            game.playerStats.dols -= game.marketStats.devsPrice
-            game.playerStats.devs += 1
-            game.marketStats.devsPrice = game.marketStats.devsBasePrice * Int(1.15 ^^ game.playerStats.devs)
+    static func hireDevTapped() {
+        var playerStats = AppShared.game.playerStats
+        var marketStats = AppShared.game.marketStats
+        let devPrice = marketStats.devsBasePrice * marketStats.devsPriceMultiplier
+
+        if playerStats.dols >= devPrice {
+            playerStats.dols -= devPrice
+            playerStats.devs += 1
+            marketStats.devsPrice = marketStats.devsBasePrice * 1.15 ^^ playerStats.devs
         }
+
+        AppShared.game.playerStats = playerStats
+        AppShared.game.marketStats = marketStats
     }
 
-    static func hireBizdevTapped(_ game: Game) {
-        if game.playerStats.dols >= game.marketStats.bizdevsPrice {
-            game.playerStats.dols -= game.marketStats.bizdevsPrice
-            game.playerStats.bizdevs += 1
-            game.marketStats.bizdevsPrice = game.marketStats.bizdevsBasePrice * Int(1.11 ^^ game.playerStats.bizdevs)
+    static func upgradeMarketingTapped() {
+        var playerStats = AppShared.game.playerStats
+        var marketStats = AppShared.game.marketStats
+
+        if playerStats.dols >= marketStats.upgradeMktPrice {
+            playerStats.dols -= marketStats.upgradeMktPrice
+            playerStats.marketingLevel += 1
+            marketStats.upgradeMktPrice = marketStats.upgradeMktBasePrice * 2 ^^ playerStats.marketingLevel
         }
+
+        AppShared.game.playerStats = playerStats
+        AppShared.game.marketStats = marketStats
     }
+
 }

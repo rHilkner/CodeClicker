@@ -16,15 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Trying to load player data object from User Defaults
-        let game = UserDefaultsServices.loadGame()
-        game.executeGameLoop()
-
-        // Instantiating first view controller
-        let initialViewController = ViewControllerFactory.instantiateViewController(ofType: .codingViewController) as! CodingViewController
-        initialViewController.game = game
-        self.window?.rootViewController = initialViewController
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.makeKeyAndVisible()
+        let game = UserDefaultsPersistence.loadGame()
+        AppShared.game = game
+        AppShared.game.executeGameLoop()
 
         return true
     }
