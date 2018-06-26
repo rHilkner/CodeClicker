@@ -16,10 +16,11 @@ class CodeServices {
         return locTapValue
     }
 
-    static func calculateDevLocProduction() -> Int {
+    static func calculateDevLocProduction() -> Double {
         let playerStats = AppShared.game.playerStats
         let productionStats = AppShared.game.productionStats
-        let locProduction = Int(productionStats.devsBase * productionStats.devsMultiplier * (2-playerStats.coffeeMktRate) * Double(playerStats.devs))
+        let locProduction = productionStats.devsBase * productionStats.devsMultiplier *
+                            (2-playerStats.coffeeMktRate) * Double(playerStats.devs)
         return locProduction
     }
 

@@ -19,6 +19,10 @@ class CodingViewController: UIViewController {
     @IBOutlet weak var mktLvlLabel: UILabel!
     @IBOutlet weak var sellPerSecLabel: UILabel!
 
+    // Buttons
+    @IBOutlet weak var hireDevButton: UIButton!
+    @IBOutlet weak var upgradeMktLvlButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         AppShared.game.gameDelegate = self
@@ -46,20 +50,34 @@ class CodingViewController: UIViewController {
         PlayerActionsServices.upgradeMarketingTapped()
     }
 
+    // TODO: delete this on final version
+    @IBAction func resetGameButtonPressed() {
+        AppShared.game = Game()
+        AppShared.game.executeGameLoop()
+        self.updateStats()
+    }
+
 }
 
 extension CodingViewController: GameDelegate {
 
     func updateStats() {
-        // Setting correct labels
+        // Setting correct data to labels
         let playerStats = AppShared.game.playerStats
+        let marketStats = AppShared.game.marketStats
 
         self.dolLabel.text = String(format: "dól: D$ %.2f", playerStats.dols)
         self.locLabel.text = "Lines of Code: \(playerStats.loc) LoC"
         self.numDevsLabel.text = "#devs: \(playerStats.devs)"
-        self.locPerSecLabel.text = "#loc/s: \(CodeServices.calculateDevLocProduction())"
+        self.locPerSecLabel.text = String(format: "#loc/s: (%.2f)", CodeServices.calculateDevLocProduction())
         self.mktLvlLabel.text = "#mkt lvl: \(playerStats.marketingLevel)"
-        self.sellPerSecLabel.text = "#sell/s: \(MarketServices.calculateLocDemand())"
+        self.sellPerSecLabel.text = String(format: "#sell/s: (%.2f)", MarketServices.calculateLocDemand())
+
+        // Setting correct prices to button titles
+        self.hireDevButton.setTitle(String(format: "+dev\n(D$ %.2f)", marketStats.devsPrice),
+                                    for: .normal)
+        self.upgradeMktLvlButton.setTitle(String(format: "+mktlvl\n(D$ %.2f)", marketStats.upgradeMktPrice),
+                                          for: .normal)
     }
 
 }
@@ -72,4 +90,3 @@ extension CodingViewController {
     }
 
 }
-

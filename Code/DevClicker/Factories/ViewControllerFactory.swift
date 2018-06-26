@@ -19,12 +19,13 @@ class ViewControllerFactory {
     static func instantiateViewController(ofType type: ViewControllerType) -> UIViewController {
         let storyboard = StoryboardFactory.instantiateStoryboard(type: StoryboardType.main)
         let viewController: UIViewController
+        let viewControllerIdentifier = type.rawValue
 
         switch type {
         case .codingViewController:
-            viewController = storyboard.instantiateViewController(withIdentifier: ViewControllerType.codingViewController.rawValue)
+            viewController = storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
         case .upgradesViewController:
-            viewController = storyboard.instantiateViewController(withIdentifier: ViewControllerType.upgradesViewController.rawValue)
+            viewController = storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
         }
 
         return viewController

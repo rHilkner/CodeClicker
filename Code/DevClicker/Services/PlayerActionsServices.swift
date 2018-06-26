@@ -22,12 +22,11 @@ class PlayerActionsServices {
     static func hireDevTapped() {
         var playerStats = AppShared.game.playerStats
         var marketStats = AppShared.game.marketStats
-        let devPrice = marketStats.devsBasePrice * marketStats.devsPriceMultiplier
 
-        if playerStats.dols >= devPrice {
-            playerStats.dols -= devPrice
+        if playerStats.dols >= marketStats.devsPrice {
+            playerStats.dols -= marketStats.devsPrice
             playerStats.devs += 1
-            marketStats.devsPrice = marketStats.devsBasePrice * 1.15 ^^ playerStats.devs
+            marketStats.devsPrice = floor(marketStats.devsBasePrice * 1.15 ^^ playerStats.devs * 100.0) / 100.0
         }
 
         AppShared.game.playerStats = playerStats

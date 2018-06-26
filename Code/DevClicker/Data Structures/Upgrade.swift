@@ -10,4 +10,10 @@ import Foundation
 
 struct Upgrade {
     let description: String
+    let locCost: Int
+    let dolCost: Int
+    let tapMultiplier: Double
+    let devsMultiplier: Double
+    let marketingMultiplier: Double
+    let locPriceMultiplier: Double
 }

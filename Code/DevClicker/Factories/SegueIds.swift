@@ -11,6 +11,6 @@ import UIKit
 
 public enum SegueIds: String {
 
-    case a = "a"
+    case firstSegue = "FirstSegue"
 
 }

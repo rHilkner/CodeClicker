@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GameDelegate {
+protocol GameDelegate: NSObjectProtocol {
     func updateStats()
 }
 
@@ -17,7 +17,7 @@ class Game {
     var playerStats: PlayerData
     var productionStats: ProductionData
     var marketStats: MarketData
-    var gameDelegate: GameDelegate? = nil
+    weak var gameDelegate: GameDelegate?
 
     init() {
         self.playerStats = PlayerData()
@@ -26,12 +26,12 @@ class Game {
     }
 
     init(playerStats: PlayerData?, productionStats: ProductionData?, marketStats: MarketData?) {
-        if let _playerStats = playerStats,
-            let _productionStats = productionStats,
-            let _marketStats = marketStats {
-            self.playerStats = _playerStats
-            self.productionStats = _productionStats
-            self.marketStats = _marketStats
+        if let unwarapedPlayerStats = playerStats,
+            let unwarapedProductionStats = productionStats,
+            let unwarapedMarketStats = marketStats {
+            self.playerStats = unwarapedPlayerStats
+            self.productionStats = unwarapedProductionStats
+            self.marketStats = unwarapedMarketStats
         } else {
             self.playerStats = PlayerData()
             self.productionStats = ProductionData()
@@ -57,7 +57,7 @@ class Game {
 
             // Variables that will be incremented to player stats
             var locProduced: Int = 0
-            var locDemand: Int = 0
+            var locDemand: Double = 0
             var locSold: Int = 0
 
             // Loop forever:
@@ -66,14 +66,16 @@ class Game {
                 timeInterval = currentTime.timeIntervalSince1970 - lastTime.timeIntervalSince1970
 
                 DispatchQueue.main.sync {
+                    let locProductionPerSec = Double(CodeServices.calculateDevLocProduction())
+
                     // Calculating production of LoC by devs
-                    locProduction = Double(CodeServices.calculateDevLocProduction()) * timeInterval + locProductionFractionRemained
+                    locProduction = locProductionPerSec * timeInterval + locProductionFractionRemained
                     locProduced = Int(locProduction)
                     locProductionFractionRemained = locProduction - floor(locProduction)
 
                     // Calculating LoC sold by bizdevs
-                    locDemand = MarketServices.calculateLocDemand()
-                    locToSell = Double(min(self.playerStats.loc, locDemand)) * timeInterval + locSoldFractionRemained
+                    locDemand = min(Double(self.playerStats.loc), MarketServices.calculateLocDemand())
+                    locToSell = locDemand * timeInterval + locSoldFractionRemained
                     locSold = Int(locToSell)
                     locSoldFractionRemained = locToSell - floor(locToSell)
 
@@ -85,11 +87,10 @@ class Game {
                     // Updating labels from delegate
                     self.gameDelegate?.updateStats()
                 }
-                
-                lastTime = currentTime
 
+                lastTime = currentTime
                 loopCounter += 1
-                if loopCounter == 1000000 {
+                if loopCounter == 100000 {
                     UserDefaultsPersistence.save(game: self)
                     loopCounter = 0
                 }

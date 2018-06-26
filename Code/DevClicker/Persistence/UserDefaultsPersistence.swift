@@ -31,11 +31,13 @@ class UserDefaultsPersistence {
                 return Game()
         }
 
+        // swiftlint:disable line_length
         guard let productionData = UserDefaults.standard.data(forKey: "productionStats"),
             let productionStats = try? JSONDecoder().decode(ProductionData.self, from: productionData) as ProductionData else {
-                print("-> ERROR: coudn't load market stats from User Defaults")
+                print("-> ERROR: coudn't load production stats from User Defaults")
                 return Game()
         }
+        // swiftlint:enable line_length
 
         guard let marketData = UserDefaults.standard.data(forKey: "marketStats"),
             let marketStats = try? JSONDecoder().decode(MarketData.self, from: marketData) as MarketData else {
@@ -46,6 +48,5 @@ class UserDefaultsPersistence {
         let game = Game(playerStats: playerStats, productionStats: productionStats, marketStats: marketStats)
         return game
     }
-
 
 }

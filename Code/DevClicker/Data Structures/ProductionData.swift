@@ -15,5 +15,4 @@ struct ProductionData: Codable {
     // lines coded per sec = devsBase * devsMultiplier
     let devsBase: Double = 1.0
     var devsMultiplier: Double = 1.0
-    
 }
