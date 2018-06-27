@@ -1,0 +1,17 @@
+[
+ {
+    "id": 0,
+    "title": "First upgrade ever",
+    "description": "Upgrade your tapping production on 2x",
+    "locCost": 100,
+    "dolCost": 100.0,
+    "tapMultiplier": 2.0
+ },
+ {
+    "id": 1,
+    "title": "Upgrade mkt",
+    "description": "Upgrade your mkt production on 25%",
+    "dolCost": 100.0,
+    "marketingMultiplier": 1.25
+ }
+]

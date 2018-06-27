@@ -21,6 +21,11 @@
 		C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CB920E1B4BC007CB091 /* CodeServices.swift */; };
 		C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
 		C61B4CBF20E2851E007CB091 /* UpgradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */; };
+		C61B4CC320E28CA8007CB091 /* upgrades.json in Resources */ = {isa = PBXBuildFile; fileRef = C61B4CC220E28CA8007CB091 /* upgrades.json */; };
+		C61B4CC520E293D2007CB091 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
+		C61B4CC920E29B5D007CB091 /* UpgradeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */; };
+		C61B4CCD20E2C153007CB091 /* UpgradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CCC20E2C153007CB091 /* UpgradesTableViewCell.swift */; };
+		C61B4CCF20E2C599007CB091 /* CellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CCE20E2C599007CB091 /* CellFactory.swift */; };
 		C65D5F6B20E0AA0C00E69339 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F6A20E0AA0C00E69339 /* MarketData.swift */; };
 		C65D5F6F20E0B9D200E69339 /* ExponentialOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F6E20E0B9D200E69339 /* ExponentialOperator.swift */; };
 		C65D5F7120E0C1BB00E69339 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F7020E0C1BB00E69339 /* Notes.swift */; };
@@ -48,6 +53,11 @@
 		C61B4CB920E1B4BC007CB091 /* CodeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeServices.swift; sourceTree = "<group>"; };
 		C61B4CBB20E1B548007CB091 /* ProductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionData.swift; sourceTree = "<group>"; };
 		C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesViewController.swift; sourceTree = "<group>"; };
+		C61B4CC220E28CA8007CB091 /* upgrades.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = upgrades.json; sourceTree = "<group>"; };
+		C61B4CC420E293D2007CB091 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeServices.swift; sourceTree = "<group>"; };
+		C61B4CCC20E2C153007CB091 /* UpgradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesTableViewCell.swift; sourceTree = "<group>"; };
+		C61B4CCE20E2C599007CB091 /* CellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFactory.swift; sourceTree = "<group>"; };
 		C65D5F6A20E0AA0C00E69339 /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
 		C65D5F6E20E0B9D200E69339 /* ExponentialOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialOperator.swift; sourceTree = "<group>"; };
 		C65D5F7020E0C1BB00E69339 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
@@ -116,8 +126,17 @@
 				C60E384820E0A34D0091B073 /* ViewControllerFactory.swift */,
 				C60E384A20E0A3E90091B073 /* StoryboardFactory.swift */,
 				C60E384C20E0A4770091B073 /* SegueIds.swift */,
+				C61B4CCE20E2C599007CB091 /* CellFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		C61B4CCB20E2C12F007CB091 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C61B4CCC20E2C153007CB091 /* UpgradesTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C65D5F6D20E0B98300E69339 /* Functionalities */ = {
@@ -150,12 +169,12 @@
 			isa = PBXGroup;
 			children = (
 				C6640E8120DF5CB200EAB7EE /* App Media */,
+				C6640E7D20DF564F00EAB7EE /* Database */,
 				C60E383D20E02F790091B073 /* App Support */,
 				C65D5F6D20E0B98300E69339 /* Functionalities */,
 				C6640E7E20DF567100EAB7EE /* Data Structures */,
 				C60E384720E0A2640091B073 /* Factories */,
 				C60E384020E046260091B073 /* Game */,
-				C6640E7D20DF564F00EAB7EE /* Database */,
 				C6640E7C20DF564900EAB7EE /* Persistence */,
 				C6640E7B20DF563A00EAB7EE /* Services */,
 				C6640E7920DF561D00EAB7EE /* View Controllers */,
@@ -176,6 +195,7 @@
 		C6640E7A20DF562900EAB7EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C61B4CCB20E2C12F007CB091 /* Cells */,
 				C6640E7020DF204F00EAB7EE /* LaunchScreen.storyboard */,
 				C6640E6B20DF204E00EAB7EE /* Main.storyboard */,
 			);
@@ -188,6 +208,7 @@
 				C60E383920E02DCD0091B073 /* PlayerActionsServices.swift */,
 				C60E383B20E02DD90091B073 /* MarketServices.swift */,
 				C61B4CB920E1B4BC007CB091 /* CodeServices.swift */,
+				C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +224,7 @@
 		C6640E7D20DF564F00EAB7EE /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				C61B4CC220E28CA8007CB091 /* upgrades.json */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -210,6 +232,7 @@
 		C6640E7E20DF567100EAB7EE /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				C61B4CC420E293D2007CB091 /* GameData.swift */,
 				C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */,
 				C61B4CBB20E1B548007CB091 /* ProductionData.swift */,
 				C65D5F6A20E0AA0C00E69339 /* MarketData.swift */,
@@ -296,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6640E7220DF204F00EAB7EE /* LaunchScreen.storyboard in Resources */,
+				C61B4CC320E28CA8007CB091 /* upgrades.json in Resources */,
 				C60E383820E02CF40091B073 /* Default-568h@2x.png in Resources */,
 				C6640E6F20DF204F00EAB7EE /* Assets.xcassets in Resources */,
 				C6640E6D20DF204E00EAB7EE /* Main.storyboard in Resources */,
@@ -346,14 +370,18 @@
 				C6640E8020DF56CF00EAB7EE /* PlayerData.swift in Sources */,
 				C60E384920E0A34D0091B073 /* ViewControllerFactory.swift in Sources */,
 				C6640E6A20DF204E00EAB7EE /* CodingViewController.swift in Sources */,
+				C61B4CCD20E2C153007CB091 /* UpgradesTableViewCell.swift in Sources */,
 				C60E384620E098FB0091B073 /* Upgrade.swift in Sources */,
 				C65D5F6B20E0AA0C00E69339 /* MarketData.swift in Sources */,
+				C61B4CCF20E2C599007CB091 /* CellFactory.swift in Sources */,
 				C60E384B20E0A3E90091B073 /* StoryboardFactory.swift in Sources */,
 				C60E384220E046590091B073 /* Game.swift in Sources */,
 				C61B4CBF20E2851E007CB091 /* UpgradesViewController.swift in Sources */,
 				C60E384420E096440091B073 /* UserDefaultsPersistence.swift in Sources */,
 				C60E383F20E02FA40091B073 /* AppShared.swift in Sources */,
 				C6640E6820DF204E00EAB7EE /* AppDelegate.swift in Sources */,
+				C61B4CC520E293D2007CB091 /* GameData.swift in Sources */,
+				C61B4CC920E29B5D007CB091 /* UpgradeServices.swift in Sources */,
 				C60E383C20E02DD90091B073 /* MarketServices.swift in Sources */,
 				C65D5F7120E0C1BB00E69339 /* Notes.swift in Sources */,
 				C60E384D20E0A4770091B073 /* SegueIds.swift in Sources */,
@@ -437,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -491,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

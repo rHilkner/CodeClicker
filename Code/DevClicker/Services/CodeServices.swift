@@ -11,14 +11,14 @@ import Foundation
 class CodeServices {
 
     static func calculateLocTapValue() -> Int {
-        let productionStats = AppShared.game.productionStats
+        let productionStats = AppShared.game.gameStats.productionStats
         let locTapValue = Int(Double(productionStats.tapBase) * productionStats.tapMultiplier)
         return locTapValue
     }
 
     static func calculateDevLocProduction() -> Double {
-        let playerStats = AppShared.game.playerStats
-        let productionStats = AppShared.game.productionStats
+        let playerStats = AppShared.game.gameStats.playerStats
+        let productionStats = AppShared.game.gameStats.productionStats
         let locProduction = productionStats.devsBase * productionStats.devsMultiplier *
                             (2-playerStats.coffeeMktRate) * Double(playerStats.devs)
         return locProduction

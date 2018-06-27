@@ -25,12 +25,17 @@ class CodingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppShared.game.gameDelegate = self
+
+        AppShared.game.gameStats.playerStats.upgradesBought = []
 
         self.coffeMktSlider.minimumValue = 0.0
         self.coffeMktSlider.maximumValue = 2.0
+        self.coffeMktSlider.value = 1.0
         self.coffeMktSlider.addTarget(self, action: #selector(self.sliderValueChanged(sender:)), for: .valueChanged)
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        AppShared.game.gameDelegate = self
         self.updateStats()
     }
 
@@ -63,8 +68,8 @@ extension CodingViewController: GameDelegate {
 
     func updateStats() {
         // Setting correct data to labels
-        let playerStats = AppShared.game.playerStats
-        let marketStats = AppShared.game.marketStats
+        let playerStats = AppShared.game.gameStats.playerStats
+        let marketStats = AppShared.game.gameStats.marketStats
 
         self.dolLabel.text = String(format: "dól: D$ %.2f", playerStats.dols)
         self.locLabel.text = "Lines of Code: \(playerStats.loc) LoC"
@@ -86,7 +91,7 @@ extension CodingViewController: GameDelegate {
 extension CodingViewController {
 
     @objc func sliderValueChanged(sender: UISlider) {
-        AppShared.game.playerStats.coffeeMktRate = Double(sender.value)
+        AppShared.game.gameStats.playerStats.coffeeMktRate = Double(sender.value)
     }
 
 }

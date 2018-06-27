@@ -11,42 +11,49 @@ import Foundation
 class UserDefaultsPersistence {
 
     static func save(game: Game) {
-        guard let encodedPlayerStats = try? JSONEncoder().encode(game.playerStats),
-            let encodedProductionStats = try? JSONEncoder().encode(game.productionStats),
-            let encodedMarketStats = try? JSONEncoder().encode(game.marketStats) else {
+        guard let encodedPlayerStats = try? JSONEncoder().encode(game.gameStats) else {
             print("-> ERROR: coudn't save game data to User Defaults")
             return
         }
 
         print("-> INFO: Saving user data to User Defaults")
-        UserDefaults.standard.set(encodedPlayerStats, forKey: "playerStats")
-        UserDefaults.standard.set(encodedProductionStats, forKey: "productionStats")
-        UserDefaults.standard.set(encodedMarketStats, forKey: "marketStats")
+        UserDefaults.standard.set(encodedPlayerStats, forKey: "gameStats")
     }
 
     static func loadGame() -> Game {
-        guard let playerData = UserDefaults.standard.data(forKey: "playerStats"),
-            let playerStats = try? JSONDecoder().decode(PlayerData.self, from: playerData) as PlayerData else {
+        // Parsing player stats from data
+        guard let gameData = UserDefaults.standard.data(forKey: "gameStats"),
+            var gameStats = try? JSONDecoder().decode(GameData.self, from: gameData) as GameData else {
                 print("-> ERROR: coudn't load player stats from User Defaults")
                 return Game()
         }
 
-        // swiftlint:disable line_length
-        guard let productionData = UserDefaults.standard.data(forKey: "productionStats"),
-            let productionStats = try? JSONDecoder().decode(ProductionData.self, from: productionData) as ProductionData else {
-                print("-> ERROR: coudn't load production stats from User Defaults")
-                return Game()
-        }
-        // swiftlint:enable line_length
-
-        guard let marketData = UserDefaults.standard.data(forKey: "marketStats"),
-            let marketStats = try? JSONDecoder().decode(MarketData.self, from: marketData) as MarketData else {
-                print("-> ERROR: coudn't load market stats from User Defaults")
-                return Game()
+        // Getting available upgrades list
+        let upgradesList = UserDefaultsPersistence.fetchUpgradesList()
+        let upgradesBought = gameStats.playerStats.upgradesBought
+        gameStats.upgradesAvailable = upgradesList.filter { (upgrade) in
+            !upgradesBought.contains { (upgradeBought) in
+                upgradeBought.id == upgrade.id
+            }
         }
 
-        let game = Game(playerStats: playerStats, productionStats: productionStats, marketStats: marketStats)
+        // Setting coffee-mkt rate to midium
+        gameStats.playerStats.coffeeMktRate = 1.0
+
+        let game = Game(gameStats: gameStats)
         return game
+    }
+
+    static func fetchUpgradesList() -> [Upgrade] {
+
+        guard let upgradesUrl = Bundle.main.url(forResource: "upgrades", withExtension: "json"),
+            let upgradesData = try? Data(contentsOf: upgradesUrl),
+            let upgradesList = try? JSONDecoder().decode([Upgrade].self, from: upgradesData) as [Upgrade] else {
+            print("-> ERROR: coudn't load full upgrades list from User Defaults")
+            return []
+        }
+
+        return upgradesList
     }
 
 }

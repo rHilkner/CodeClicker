@@ -8,12 +8,16 @@
 
 import Foundation
 
-struct Upgrade {
+// swiftlint:disable identifier_name
+struct Upgrade: Codable {
+    let id: Int
+    let title: String
     let description: String
-    let locCost: Int
-    let dolCost: Int
-    let tapMultiplier: Double
-    let devsMultiplier: Double
-    let marketingMultiplier: Double
-    let locPriceMultiplier: Double
+    let locCost: Int?
+    let dolCost: Double?
+    let tapMultiplier: Double?
+    let devsMultiplier: Double?
+    let marketingMultiplier: Double?
+    let locPriceMultiplier: Double?
 }
+// swiftlint:enable identifier_name
