@@ -18,6 +18,8 @@ struct Upgrade: Codable {
     let tapMultiplier: Double?
     let devsMultiplier: Double?
     let marketingMultiplier: Double?
-    let locPriceMultiplier: Double?
+    let sellLocPriceMultiplier: Double?
+    let devsPriceMultiplier: Double?
+    let pcPriceMultiplier: Double?
 }
 // swiftlint:enable identifier_name

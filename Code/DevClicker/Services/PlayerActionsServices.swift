@@ -21,12 +21,12 @@ class PlayerActionsServices {
 
     static func hireDevTapped() {
         var playerStats = AppShared.game.gameStats.playerStats
-        var marketStats = AppShared.game.gameStats.marketStats
+        let marketStats = AppShared.game.gameStats.marketStats
 
-        if playerStats.dols >= marketStats.devsPrice {
+        if playerStats.dols >= marketStats.devsPrice && playerStats.devs < playerStats.pcs {
             playerStats.dols -= marketStats.devsPrice
             playerStats.devs += 1
-            marketStats.devsPrice = floor(marketStats.devsBasePrice * 1.15 ^^ playerStats.devs * 100.0) / 100.0
+            MarketServices.updateDevPrice()
         }
 
         AppShared.game.gameStats.playerStats = playerStats
@@ -35,12 +35,26 @@ class PlayerActionsServices {
 
     static func upgradeMarketingTapped() {
         var playerStats = AppShared.game.gameStats.playerStats
-        var marketStats = AppShared.game.gameStats.marketStats
+        let marketStats = AppShared.game.gameStats.marketStats
 
         if playerStats.dols >= marketStats.upgradeMktPrice {
             playerStats.dols -= marketStats.upgradeMktPrice
             playerStats.marketingLevel += 1
-            marketStats.upgradeMktPrice = marketStats.upgradeMktBasePrice * 2 ^^ playerStats.marketingLevel
+            MarketServices.updateMktPrice()
+        }
+
+        AppShared.game.gameStats.playerStats = playerStats
+        AppShared.game.gameStats.marketStats = marketStats
+    }
+
+    static func addPcTapped() {
+        var playerStats = AppShared.game.gameStats.playerStats
+        let marketStats = AppShared.game.gameStats.marketStats
+
+        if playerStats.dols >= marketStats.pcPrice {
+            playerStats.dols -= marketStats.pcPrice
+            playerStats.pcs += 1
+            MarketServices.updatePcPrice()
         }
 
         AppShared.game.gameStats.playerStats = playerStats

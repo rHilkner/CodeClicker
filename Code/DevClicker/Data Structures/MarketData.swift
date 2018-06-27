@@ -11,10 +11,14 @@ import Foundation
 /** MarketData variables can't be controlled by the user (they are automatically
   * updated by the system) and they set pace on the LoC market. */
 struct MarketData: Codable {
-    // devPrice = devsBasePriceMultiplier * devsBasePrice * 1.15 ^ playerStats.devs
+    // devPrice = devsPriceMultiplier * devsBasePrice * 1.07 ^ playerStats.devs
     var devsBasePrice: Double = 5.00
     var devsPriceMultiplier: Double = 1.0
     var devsPrice: Double = 5.00
+    // pcPrice = pcBasePrice * pcPriceMultiplier * 1.08 ^ playerStats.pcs
+    var pcBasePrice: Double = 5.00
+    var pcPriceMultiplier: Double = 1.0
+    var pcPrice: Double = 5.00
     // sellLocPrice = sellLocBasePrice * sellLocPriceMultiplier
     var sellLocBasePrice: Double = 1.00
     var sellLocPriceMultiplier: Double = 1.0

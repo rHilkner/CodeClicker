@@ -29,10 +29,10 @@ class Game {
         }
     }
 
+    // swiftlint:disable function_body_length
     /// Starts game loop
     func executeGameLoop() {
         DispatchQueue.global().async {
-
             var loopCounter = 0
 
             var lastTime = Date()
@@ -96,5 +96,6 @@ class Game {
             }
         }
     }
+    // swift_lint:enable function_body_length
 
 }

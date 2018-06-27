@@ -3,12 +3,16 @@
 
 
  TO DO:
+ - Fazer pseudo-funcionar em idle (quarta)
  * Programação funcional (quinta)
  * Protocol Oriented (quinta)
  * UI/Unit Test (quinta)
+ * Subir pra loja (sexta)
+
+ LATER:
  - Habilitar multi touch (pegar tapGesture ao invés de botão)
  - Usar k, M, ..., ao invés de (1^3)^i
- - Fazer funcionar em idle)
+ - Conectar ao Game Center
 
 
  IDEIAS
@@ -26,11 +30,11 @@
         - seila
     PC capacity
         - Máquina com 2 dev
+cd 
 
-
- Upgrades pro futuro:
+ Ideias pro futuro:
     - Compra gráficos que mostram como foi a oferta e demanda (escolhida pelo próprio usuário)
-    -
+    - [Monetização] Jogo começa com design porco e usuário vai comprando skins/designs mais brisa pro jogo
 
 
  EASTER EGG (HACKZ0RZ):

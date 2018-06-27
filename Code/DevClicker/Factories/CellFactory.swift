@@ -23,9 +23,13 @@ class CellFactory {
         cell.descriptionLabel.text = upgrade.description
         if let dolCost = upgrade.dolCost {
             cell.dolCostLabel.text = String(format: "D$ %.2f", dolCost)
+        } else {
+            cell.dolCostLabel.text = ""
         }
         if let locCost = upgrade.locCost {
             cell.locCostLabel.text = "\(locCost) LoC"
+        } else {
+            cell.locCostLabel.text = ""
         }
 
         return cell
@@ -33,4 +37,3 @@ class CellFactory {
 
 }
 // swiftlint:enable force_cast
-

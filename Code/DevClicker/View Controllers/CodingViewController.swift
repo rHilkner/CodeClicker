@@ -22,11 +22,10 @@ class CodingViewController: UIViewController {
     // Buttons
     @IBOutlet weak var hireDevButton: UIButton!
     @IBOutlet weak var upgradeMktLvlButton: UIButton!
+    @IBOutlet weak var addPcButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        AppShared.game.gameStats.playerStats.upgradesBought = []
 
         self.coffeMktSlider.minimumValue = 0.0
         self.coffeMktSlider.maximumValue = 2.0
@@ -53,6 +52,10 @@ class CodingViewController: UIViewController {
 
     @IBAction func upgradeMktButtonPressed() {
         PlayerActionsServices.upgradeMarketingTapped()
+    }
+
+    @IBAction func addPcButtonPressed() {
+        PlayerActionsServices.addPcTapped()
     }
 
     // TODO: delete this on final version
@@ -83,6 +86,8 @@ extension CodingViewController: GameDelegate {
                                     for: .normal)
         self.upgradeMktLvlButton.setTitle(String(format: "+mktlvl\n(D$ %.2f)", marketStats.upgradeMktPrice),
                                           for: .normal)
+        self.addPcButton.setTitle(String(format: "+PC (D$ %.2f): %d", marketStats.pcPrice, playerStats.pcs),
+                                  for: .normal)
     }
 
 }

@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        // Changing status bar color to adjust to dark background
+        UIApplication.shared.statusBarStyle = .lightContent
+
         // Trying to load player data object from User Defaults
         let game = UserDefaultsPersistence.loadGame()
         AppShared.game = game

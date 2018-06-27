@@ -1,17 +1,98 @@
 [
  {
-    "id": 0,
-    "title": "First upgrade ever",
-    "description": "Upgrade your tapping production on 2x",
-    "locCost": 100,
-    "dolCost": 100.0,
-    "tapMultiplier": 2.0
+     "id": 0,
+     "title": "Type type type!",
+     "description": "Tap produces 5x LoC",
+     "locCost": 50,
+     "dolCost": 50.0,
+     "tapMultiplier": 5.0
  },
  {
-    "id": 1,
-    "title": "Upgrade mkt",
-    "description": "Upgrade your mkt production on 25%",
-    "dolCost": 100.0,
-    "marketingMultiplier": 1.25
+     "id": 1,
+     "title": "Radio mkt campaign",
+     "description": "Upgrade mkt production on 25%",
+     "dolCost": 200.0,
+     "marketingMultiplier": 1.25
+ },
+ {
+     "id": 2,
+     "title": "More coffee!",
+     "description": "Devs produce 2x LoC",
+     "locCost": 200,
+     "dolCost": 200.0,
+     "devsMultiplier": 2.0
+ },
+ {
+     "id": 3,
+     "title": "TYYYYPPEEEEE! AAAAH",
+     "description": "Tap produces 2x LoC",
+     "locCost": 500,
+     "dolCost": 200.0,
+     "tapMultiplier": 2.0
+ },
+ {
+     "id": 4,
+     "title": "Cleaner code",
+     "description": "LoC selling price +25%",
+     "locCost": 1000,
+     "sellLocPriceMultiplier": 1.25
+ },
+ {
+     "id": 5,
+     "title": "Get some interns",
+     "description": "Devs hiring price -10%",
+     "locCost": 1500,
+     "devsPriceMultiplier": 0.9
+ },
+ {
+     "id": 6,
+     "title": "Tap tap tap...",
+     "description": "Tap produces 2x LoC",
+     "dolCost": 2000.0,
+     "tapMultiplier": 2.0
+ },
+ {
+     "id": 7,
+     "title": "Second line equipments",
+     "description": "PCs price -10%",
+     "dolCost": 2000.0,
+     "pcPriceMultiplier": 0.9
+ },
+ {
+     "id": 8,
+     "title": "MVC code architecture!",
+     "description": "Devs produce 50%+ LoC",
+     "locCost": 3000,
+     "dolCost": 2000.0,
+     "devsMultiplier": 1.5
+ },
+ {
+     "id": 9,
+     "title": "TV mkt campaign",
+     "description": "Upgrade mkt production on 20%",
+     "dolCost": 5000.0,
+     "marketingMultiplier": 1.2
+ },
+ {
+     "id": 10,
+     "title": "Quality is everything",
+     "description": "LoC selling price +25%",
+     "locCost": 10000,
+     "sellLocPriceMultiplier": 1.25
+ },
+ {
+     "id": 11,
+     "title": "Quality is everything",
+     "description": "LoC selling price +25%",
+     "locCost": 10000,
+     "sellLocPriceMultiplier": 1.25
+ },
+ {
+     "id": 12,
+     "title": "Dijkstra algorithm",
+     "description": "Devs produce 33%+ LoC",
+     "locCost": 20000,
+     "dolCost": 5000.0,
+     "devsMultiplier": 1.3334
  }
 ]
