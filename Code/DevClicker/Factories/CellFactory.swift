@@ -15,7 +15,6 @@ public enum CellType: String {
 // swiftlint:disable force_cast
 class CellFactory {
 
-    // TODO: UI/Unit test here
     static func upgradeCell(tableView: UITableView, upgrade: Upgrade) -> UpgradesTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellType.upgrade.rawValue) as! UpgradesTableViewCell
 

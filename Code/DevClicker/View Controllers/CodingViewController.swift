@@ -76,7 +76,7 @@ extension CodingViewController: GameDelegate {
         let marketStats = AppShared.game.gameStats.marketStats
 
         self.dolLabel.text = String(format: "dól: D$ %.2f", playerStats.dols)
-        self.locLabel.text = "Lines of Code: \(playerStats.loc) LoC"
+        self.locLabel.text = "Lines of Code: \(UIServices.locStringFormat(loc: playerStats.loc))"
         self.numDevsLabel.text = "#devs: \(playerStats.devs)"
         self.locPerSecLabel.text = String(format: "#loc/s: (%.2f)", CodeServices.calculateDevLocProduction(game: AppShared.game))
         self.mktLvlLabel.text = "#mkt lvl: \(playerStats.marketingLevel)"

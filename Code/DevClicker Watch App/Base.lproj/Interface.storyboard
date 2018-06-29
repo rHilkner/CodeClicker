@@ -97,7 +97,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="349"/>
+            <point key="canvasLocation" x="168" y="337"/>
         </scene>
         <!--Right Interface Controller-->
         <scene sceneID="IBy-Ip-2FT">
@@ -131,7 +131,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="583" y="337"/>
+            <point key="canvasLocation" x="478" y="337"/>
         </scene>
         <!--MarketInterfaceController-->
         <scene sceneID="0X9-bQ-Vnt">
@@ -172,14 +172,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="168" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="DevClicker_Watch_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="478" y="643"/>
         </scene>
     </scenes>
 </document>
