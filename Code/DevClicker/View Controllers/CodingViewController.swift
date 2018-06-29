@@ -29,11 +29,11 @@ class CodingViewController: UIViewController {
 
         self.coffeMktSlider.minimumValue = 0.0
         self.coffeMktSlider.maximumValue = 2.0
-        self.coffeMktSlider.value = 1.0
+        self.coffeMktSlider.value = Float(AppShared.game.gameStats.playerStats.coffeeMktRate)
         self.coffeMktSlider.addTarget(self, action: #selector(self.sliderValueChanged(sender:)), for: .valueChanged)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         AppShared.game.gameDelegate = self
         self.updateStats()
     }
@@ -63,6 +63,7 @@ class CodingViewController: UIViewController {
         AppShared.game = Game()
         AppShared.game.executeGameLoop()
         self.updateStats()
+        self.coffeMktSlider.value = Float(AppShared.game.gameStats.playerStats.coffeeMktRate)
     }
 
 }
@@ -77,9 +78,9 @@ extension CodingViewController: GameDelegate {
         self.dolLabel.text = String(format: "dól: D$ %.2f", playerStats.dols)
         self.locLabel.text = "Lines of Code: \(playerStats.loc) LoC"
         self.numDevsLabel.text = "#devs: \(playerStats.devs)"
-        self.locPerSecLabel.text = String(format: "#loc/s: (%.2f)", CodeServices.calculateDevLocProduction())
+        self.locPerSecLabel.text = String(format: "#loc/s: (%.2f)", CodeServices.calculateDevLocProduction(game: AppShared.game))
         self.mktLvlLabel.text = "#mkt lvl: \(playerStats.marketingLevel)"
-        self.sellPerSecLabel.text = String(format: "#sell/s: (%.2f)", MarketServices.calculateLocDemand())
+        self.sellPerSecLabel.text = String(format: "#sell/s: (%.2f)", MarketServices.calculateLocDemand(game: AppShared.game))
 
         // Setting correct prices to button titles
         self.hireDevButton.setTitle(String(format: "+dev\n(D$ %.2f)", marketStats.devsPrice),

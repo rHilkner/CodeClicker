@@ -10,7 +10,11 @@ import Foundation
 
 class UserDefaultsPersistence {
 
-    static func save(game: Game) {
+    static func saveGame() {
+        let game = AppShared.game
+        game.gameStats.lastSaveTimeInterval = Date().timeIntervalSince1970
+
+        // Encoding game stats
         guard let encodedPlayerStats = try? JSONEncoder().encode(game.gameStats) else {
             print("-> ERROR: coudn't save game data to User Defaults")
             return
@@ -37,10 +41,22 @@ class UserDefaultsPersistence {
             }
         }
 
-        // Setting coffee-mkt rate to midium
-        gameStats.playerStats.coffeeMktRate = 1.0
-
         let game = Game(gameStats: gameStats)
+
+        // Calculating idle profits
+        let currentTime = Date().timeIntervalSince1970
+        let lastSaveTime = game.gameStats.lastSaveTimeInterval
+        let diffTime = currentTime - lastSaveTime
+        let devProductivity = diffTime * CodeServices.calculateDevLocProduction(game: game)
+        game.gameStats.playerStats.loc += Int(devProductivity)
+        let mktDemand = Int(diffTime * MarketServices.calculateLocDemand(game: game))
+        let mktSellings = min(game.gameStats.playerStats.loc, mktDemand)
+        let mktProfit = Double(mktSellings) * MarketServices.calculateLocPrice(game: game)
+        game.gameStats.playerStats.loc -= mktSellings
+        game.gameStats.playerStats.dols += mktProfit
+
+        print("LocProd: \(Int(devProductivity))\nProfit: \(mktDemand)")
+
         return game
     }
 

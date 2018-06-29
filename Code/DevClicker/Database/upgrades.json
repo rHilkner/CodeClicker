@@ -2,10 +2,10 @@
  {
      "id": 0,
      "title": "Type type type!",
-     "description": "Tap produces 5x LoC",
+     "description": "Tap produces 2x LoC",
      "locCost": 50,
      "dolCost": 50.0,
-     "tapMultiplier": 5.0
+     "tapMultiplier": 2.0
  },
  {
      "id": 1,
@@ -25,10 +25,10 @@
  {
      "id": 3,
      "title": "TYYYYPPEEEEE! AAAAH",
-     "description": "Tap produces 2x LoC",
+     "description": "Tap produces 3x LoC",
      "locCost": 500,
      "dolCost": 200.0,
-     "tapMultiplier": 2.0
+     "tapMultiplier": 3.0
  },
  {
      "id": 4,
@@ -82,13 +82,6 @@
  },
  {
      "id": 11,
-     "title": "Quality is everything",
-     "description": "LoC selling price +25%",
-     "locCost": 10000,
-     "sellLocPriceMultiplier": 1.25
- },
- {
-     "id": 12,
      "title": "Dijkstra algorithm",
      "description": "Devs produce 33%+ LoC",
      "locCost": 20000,

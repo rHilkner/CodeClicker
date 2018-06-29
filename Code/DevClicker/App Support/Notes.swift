@@ -30,7 +30,7 @@
         - seila
     PC capacity
         - Máquina com 2 dev
-cd 
+
 
  Ideias pro futuro:
     - Compra gráficos que mostram como foi a oferta e demanda (escolhida pelo próprio usuário)

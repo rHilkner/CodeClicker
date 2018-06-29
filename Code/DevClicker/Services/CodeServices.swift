@@ -10,15 +10,15 @@ import Foundation
 
 class CodeServices {
 
-    static func calculateLocTapValue() -> Int {
-        let productionStats = AppShared.game.gameStats.productionStats
+    static func calculateLocTapValue(game: Game) -> Int {
+        let productionStats = game.gameStats.productionStats
         let locTapValue = Int(Double(productionStats.tapBase) * productionStats.tapMultiplier)
         return locTapValue
     }
 
-    static func calculateDevLocProduction() -> Double {
-        let playerStats = AppShared.game.gameStats.playerStats
-        let productionStats = AppShared.game.gameStats.productionStats
+    static func calculateDevLocProduction(game: Game) -> Double {
+        let playerStats = game.gameStats.playerStats
+        let productionStats = game.gameStats.productionStats
         let locProduction = productionStats.devsBase * productionStats.devsMultiplier *
                             (2-playerStats.coffeeMktRate) * Double(playerStats.devs)
         return locProduction

@@ -55,7 +55,9 @@ extension UpgradesViewController: UITableViewDelegate {
     /// Performs actions when a table view cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let upgradeSelected = self.upgradesAvailable[indexPath.row]
-        UpgradeServices.buy(upgrade: upgradeSelected)
+        if !UpgradeServices.buy(upgrade: upgradeSelected) {
+            print("-> INFO: Couldn't buy the selected upgrade.")
+        }
         self.refreshTableViewContent()
     }
 
