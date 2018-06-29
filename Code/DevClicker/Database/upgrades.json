@@ -9,7 +9,7 @@
  },
  {
      "id": 1,
-     "title": "Radio mkt campaign",
+     "title": "Radio campaign",
      "description": "Upgrade mkt production on 25%",
      "dolCost": 200.0,
      "marketingMultiplier": 1.25
@@ -24,7 +24,7 @@
  },
  {
      "id": 3,
-     "title": "TYYYYPPEEEEE! AAAAH",
+     "title": "TYYYYPPEEEEE! AAAAH!!!",
      "description": "Tap produces 3x LoC",
      "locCost": 500,
      "dolCost": 200.0,
