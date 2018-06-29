@@ -11,8 +11,13 @@ import Foundation
 
 class MiddleInterfaceController: WKInterfaceController {
     
+    @IBOutlet var locLabel: WKInterfaceLabel!
+    @IBOutlet var dolLabel: WKInterfaceLabel!
+    @IBOutlet var devsLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         self.becomeCurrentPage()
         
         AppShared.game.gameDelegate = self
@@ -35,6 +40,12 @@ extension MiddleInterfaceController: GameDelegate {
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
+        
+        self.dolLabel.setText(String(format: "%.2f", playerStats.dols))
+         
+        self.locLabel.setText(String(format: "%.2f", playerStats.loc))
+    
+        self.devsLabel.setText(String(playerStats.devs))
         
     }
     

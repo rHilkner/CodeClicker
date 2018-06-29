@@ -87,12 +87,12 @@
                                 </group>
                                 <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="3" steps="3" id="p20-z6-Xd2"/>
                             </items>
-                            <gestureRecognizers>
-                                <tapGestureRecognizer id="c9U-30-5nd"/>
-                            </gestureRecognizers>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="devsLabel" destination="S1t-0u-wWJ" id="ZXO-tA-exd"/>
+                        <outlet property="dolLabel" destination="rFN-sZ-eKf" id="OEd-d1-AHb"/>
+                        <outlet property="locLabel" destination="0r2-Pj-XlG" id="zvP-si-8Ef"/>
                         <segue destination="eP4-8n-cEB" kind="relationship" relationship="nextPage" id="l9z-P3-AGK"/>
                     </connections>
                 </controller>
@@ -136,7 +136,7 @@
         <!--MarketInterfaceController-->
         <scene sceneID="0X9-bQ-Vnt">
             <objects>
-                <controller identifier="MarketInterfaceController" hidesWhenLoading="NO" id="khS-Q1-IJl">
+                <controller identifier="MarketInterfaceController" hidesWhenLoading="NO" id="khS-Q1-IJl" customClass="MarketInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
                         <group width="1" height="119" alignment="left" layout="vertical" id="enZ-V5-ncf">
                             <items>

@@ -1,39 +1,48 @@
+//
+//  WatchSessionManager.swift
+//  DevClicker Watch App Extension
+//
+//  Created by Mauricio Lorenzetti on 29/06/18.
+//  Copyright © 2018 Rodrigo Hilkner. All rights reserved.
+//
+
 import WatchConnectivity
 
-// Note that the WCSessionDelegate must be an NSObject
-// So no, you cannot use the nice Swift struct here!
 class WatchSessionManager: NSObject, WCSessionDelegate {
+    
+    #if os(iOS)
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+        return
+    }
+    
+    public func sessionDidDeactivate(_ session: WCSession) {
+        return
+    }
+    #endif
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         return
     }
     
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        return
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+        if let jsonString = applicationContext["gameStats"] as? String {
+            if let jsonData = jsonString.data(using: .utf8) {
+                if let gameStats = try? JSONDecoder().decode(GameData.self, from: jsonData) {
+                    AppShared.game.gameStats = gameStats
+                    UserDefaultsPersistence.saveGame()
+                }
+            }
+        }
     }
     
-    func sessionDidDeactivate(_ session: WCSession) {
-        return
-    }
-    
-    // Instantiate the Singleton
     static let sharedManager = WatchSessionManager()
     
     private override init() {
         super.init()
     }
     
-    // Keep a reference for the session,
-    // which will be used later for sending / receiving data
-    private let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
-    
-    // Add a validSession variable to check that the Watch is paired
-    // and the Watch App installed to prevent extra computation
-    // if these conditions are not met.
-    
-    // This is a computed property, since the user can pair their device and / or
-    // install your app while using your iOS app, so this can become valid
-    
+    private let session: WCSession = WCSession.default
+    /*
     private var validSession: WCSession? {
         
         // paired - the user has to have their device paired to the watch
@@ -46,23 +55,23 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
             return session
         }
         return nil
-    }
+    }*/
     
     func startSession() {
-        session?.delegate = self
-        session?.activate()
+        session.delegate = self
+        session.activate()
     }
     
     func updateGame(game: Game) throws {
         
         let encodedObject = try? JSONEncoder().encode(game.gameStats)
         
-        if let session = validSession {
+        //if let session = validSession {
             do {
                 try session.updateApplicationContext(["gameStats": String(data: encodedObject!, encoding: .utf8)!])
             } catch let error {
                 throw error
             }
-        }
+        //}
     }
 }

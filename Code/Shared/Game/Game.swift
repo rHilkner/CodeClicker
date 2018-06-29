@@ -86,11 +86,14 @@ class Game {
 
                     // Updating labels from delegate
                     self.gameDelegate?.updateStats()
+                    
+                    //try? WatchSessionServerManager.sharedManager.updateGame(game: AppShared.game)
+                    
                 }
 
                 lastTime = currentTime
                 loopCounter += 1
-                if loopCounter == 100000 {
+                if loopCounter == 10000 {
                     UserDefaultsPersistence.saveGame()
                     loopCounter = 0
                 }

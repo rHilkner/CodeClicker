@@ -18,10 +18,12 @@
 		2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */; };
 		2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */; };
 		2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* RightInterfaceController.swift */; };
-		2256124820E62D7F00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124720E62D7F00424840 /* WatchSessionManager.swift */; };
 		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
 		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
+		229004A420E6C3CF00C04776 /* MarketInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */; };
+		229004A520E6C92900C04776 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* UIServices.swift */; };
+		22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		22F41A9C20E5CFA4001FCFDA /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
 		22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
 		22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
@@ -131,8 +133,8 @@
 		2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleInterfaceController.swift; sourceTree = "<group>"; };
 		2200678720E564A600A66BA6 /* RightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightInterfaceController.swift; sourceTree = "<group>"; };
-		2256124720E62D7F00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		2256124920E62FAA00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInterfaceController.swift; sourceTree = "<group>"; };
 		22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevClicker.entitlements; sourceTree = "<group>"; };
 		22F41AAB20E5FAD0001FCFDA /* DevClicker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App.entitlements"; sourceTree = "<group>"; };
 		22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App Extension.entitlements"; sourceTree = "<group>"; };
@@ -230,7 +232,6 @@
 			children = (
 				22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */,
 				2256124D20E6477300424840 /* Interface Controllers */,
-				2256124920E62FAA00424840 /* WatchSessionManager.swift */,
 				2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */,
 				2200677220E48D7000A66BA6 /* NotificationController.swift */,
 				2200677420E48D7000A66BA6 /* ComplicationController.swift */,
@@ -245,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				C60E383E20E02FA40091B073 /* AppShared.swift */,
-				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
+				C6640E7C20DF564900EAB7EE /* Persistence */,
 				C60E384020E046260091B073 /* Game */,
 			);
 			path = Shared;
@@ -257,6 +258,7 @@
 				2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */,
 				2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */,
 				2200678720E564A600A66BA6 /* RightInterfaceController.swift */,
+				229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */,
 			);
 			path = "Interface Controllers";
 			sourceTree = "<group>";
@@ -350,7 +352,6 @@
 				C65D5F6D20E0B98300E69339 /* Functionalities */,
 				C6640E7E20DF567100EAB7EE /* Data Structures */,
 				C60E384720E0A2640091B073 /* Factories */,
-				C6640E7C20DF564900EAB7EE /* Persistence */,
 				C6640E7B20DF563A00EAB7EE /* Services */,
 				C6640E7920DF561D00EAB7EE /* View Controllers */,
 				C6640E7A20DF562900EAB7EE /* Views */,
@@ -392,7 +393,8 @@
 		C6640E7C20DF564900EAB7EE /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				2256124720E62D7F00424840 /* WatchSessionManager.swift */,
+				2256124920E62FAA00424840 /* WatchSessionManager.swift */,
+				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -544,7 +546,7 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -552,7 +554,7 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -703,11 +705,13 @@
 				22F41AA820E5DD56001FCFDA /* UpgradeServices.swift in Sources */,
 				2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */,
 				22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */,
+				229004A520E6C92900C04776 /* UIServices.swift in Sources */,
 				2256124C20E638E400424840 /* Game.swift in Sources */,
 				22F41AA220E5DD38001FCFDA /* Upgrade.swift in Sources */,
 				2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */,
 				22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */,
 				2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */,
+				229004A420E6C3CF00C04776 /* MarketInterfaceController.swift in Sources */,
 				22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */,
 				2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */,
 				22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */,
@@ -732,12 +736,12 @@
 				C60E384420E096440091B073 /* UserDefaultsPersistence.swift in Sources */,
 				C60E383F20E02FA40091B073 /* AppShared.swift in Sources */,
 				C6640E6820DF204E00EAB7EE /* AppDelegate.swift in Sources */,
-				2256124820E62D7F00424840 /* WatchSessionManager.swift in Sources */,
 				C61B4CC520E293D2007CB091 /* GameData.swift in Sources */,
 				C61B4CC920E29B5D007CB091 /* UpgradeServices.swift in Sources */,
 				C60E383C20E02DD90091B073 /* MarketServices.swift in Sources */,
 				C65D5F7120E0C1BB00E69339 /* Notes.swift in Sources */,
 				C60E384D20E0A4770091B073 /* SegueIds.swift in Sources */,
+				22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */,
 				C60E383A20E02DCD0091B073 /* PlayerActionsServices.swift in Sources */,
 				C65D5F6F20E0B9D200E69339 /* ExponentialOperator.swift in Sources */,
 				C6A78B6E20E69F740034F7D6 /* UIServices.swift in Sources */,
@@ -806,8 +810,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/DevClicker Watch App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -829,8 +834,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/DevClicker Watch App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -854,7 +860,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				IBSC_MODULE = DevClicker_Watch_App_Extension;
 				INFOPLIST_FILE = "DevClicker Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp;
@@ -873,7 +879,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				IBSC_MODULE = DevClicker_Watch_App_Extension;
 				INFOPLIST_FILE = "DevClicker Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp;
@@ -1006,8 +1012,9 @@
 			baseConfigurationReference = 3EF61D4390EF77A8BE175A24 /* Pods-DevClicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevClicker/DevClicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1025,8 +1032,9 @@
 			baseConfigurationReference = 1F337EEB6B253E71C602FC05 /* Pods-DevClicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevClicker/DevClicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1044,7 +1052,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = DevClickerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1065,7 +1073,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = DevClickerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,6 +17,7 @@ class PlayerActionsServices {
 
         let locProduced = Int(tapBase * tapMultiplier)
         AppShared.game.gameStats.playerStats.loc += locProduced
+        self.sendDataToWatch()
     }
 
     static func hireDevTapped() {
@@ -30,6 +31,7 @@ class PlayerActionsServices {
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updateDevPrice()
+        self.sendDataToWatch()
     }
 
     static func upgradeMarketingTapped() {
@@ -43,6 +45,7 @@ class PlayerActionsServices {
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updateMktPrice()
+        self.sendDataToWatch()
     }
 
     static func addPcTapped() {
@@ -56,6 +59,12 @@ class PlayerActionsServices {
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updatePcPrice()
+        self.sendDataToWatch()
+    }
+    
+    static func sendDataToWatch() {
+        UserDefaultsPersistence.saveGame()
+        try? WatchSessionManager.sharedManager.updateGame(game: AppShared.game)
     }
 
 }

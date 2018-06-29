@@ -89,8 +89,6 @@ extension CodingViewController: GameDelegate {
                                           for: .normal)
         self.addPcButton.setTitle(String(format: "+PC (D$ %.2f): %d", marketStats.pcPrice, playerStats.pcs),
                                   for: .normal)
-        
-        try? WatchSessionManager.sharedManager.updateGame(game: AppShared.game)
     }
 
 }
