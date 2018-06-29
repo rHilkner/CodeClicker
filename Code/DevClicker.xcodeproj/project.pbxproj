@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2200676120E48D6F00A66BA6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2200675F20E48D6F00A66BA6 /* Interface.storyboard */; };
+		2200676320E48D7000A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200676220E48D7000A66BA6 /* Assets.xcassets */; };
+		2200676A20E48D7000A66BA6 /* DevClicker Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */; };
+		2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */; };
+		2200677320E48D7000A66BA6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677220E48D7000A66BA6 /* NotificationController.swift */; };
+		2200677520E48D7000A66BA6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677420E48D7000A66BA6 /* ComplicationController.swift */; };
+		2200677720E48D7100A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200677620E48D7100A66BA6 /* Assets.xcassets */; };
+		2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */; };
+		2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */; };
+		2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* RightInterfaceController.swift */; };
+		2256124820E62D7F00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124720E62D7F00424840 /* WatchSessionManager.swift */; };
+		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
+		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
+		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
+		22F41A9C20E5CFA4001FCFDA /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
+		22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
+		22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
+		22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
+		22F41AA120E5DD36001FCFDA /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F6A20E0AA0C00E69339 /* MarketData.swift */; };
+		22F41AA220E5DD38001FCFDA /* Upgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384520E098FB0091B073 /* Upgrade.swift */; };
+		22F41AA320E5DD3F001FCFDA /* ExponentialOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F6E20E0B9D200E69339 /* ExponentialOperator.swift */; };
+		22F41AA420E5DD49001FCFDA /* upgrades.json in Resources */ = {isa = PBXBuildFile; fileRef = C61B4CC220E28CA8007CB091 /* upgrades.json */; };
+		22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383920E02DCD0091B073 /* PlayerActionsServices.swift */; };
+		22F41AA620E5DD51001FCFDA /* MarketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383B20E02DD90091B073 /* MarketServices.swift */; };
+		22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CB920E1B4BC007CB091 /* CodeServices.swift */; };
+		22F41AA820E5DD56001FCFDA /* UpgradeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */; };
 		2CB0507FA689AA3541F082BD /* Pods_DevClicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC927F400D6A2B0FDE8ADD6C /* Pods_DevClicker.framework */; };
 		C60E383820E02CF40091B073 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C60E383720E02CF40091B073 /* Default-568h@2x.png */; };
 		C60E383A20E02DCD0091B073 /* PlayerActionsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383920E02DCD0091B073 /* PlayerActionsServices.swift */; };
@@ -37,8 +64,69 @@
 		C6640E8020DF56CF00EAB7EE /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2200676B20E48D7000A66BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6640E5C20DF204E00EAB7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2200676820E48D7000A66BA6;
+			remoteInfo = "DevClicker Watch App Extension";
+		};
+		2200677A20E48D7100A66BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6640E5C20DF204E00EAB7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2200675C20E48D6F00A66BA6;
+			remoteInfo = "DevClicker Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2200678020E48D7100A66BA6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2200676A20E48D7000A66BA6 /* DevClicker Watch App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2200678420E48D7100A66BA6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1F337EEB6B253E71C602FC05 /* Pods-DevClicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevClicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevClicker/Pods-DevClicker.release.xcconfig"; sourceTree = "<group>"; };
+		2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DevClicker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200676020E48D6F00A66BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2200676220E48D7000A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2200676420E48D7000A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DevClicker Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftInterfaceController.swift; sourceTree = "<group>"; };
+		2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2200677220E48D7000A66BA6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2200677420E48D7000A66BA6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2200677620E48D7100A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2200677820E48D7100A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleInterfaceController.swift; sourceTree = "<group>"; };
+		2200678720E564A600A66BA6 /* RightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightInterfaceController.swift; sourceTree = "<group>"; };
+		2256124720E62D7F00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		2256124920E62FAA00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevClicker.entitlements; sourceTree = "<group>"; };
+		22F41AAB20E5FAD0001FCFDA /* DevClicker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App.entitlements"; sourceTree = "<group>"; };
+		22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App Extension.entitlements"; sourceTree = "<group>"; };
 		3EF61D4390EF77A8BE175A24 /* Pods-DevClicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevClicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevClicker/Pods-DevClicker.debug.xcconfig"; sourceTree = "<group>"; };
 		C60E383720E02CF40091B073 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C60E383920E02DCD0091B073 /* PlayerActionsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerActionsServices.swift; sourceTree = "<group>"; };
@@ -73,6 +161,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2200676620E48D7000A66BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3126962B00908A3877794EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6640E6120DF204E00EAB7EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +194,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2200675E20E48D6F00A66BA6 /* DevClicker Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				22F41AAB20E5FAD0001FCFDA /* DevClicker Watch App.entitlements */,
+				2200675F20E48D6F00A66BA6 /* Interface.storyboard */,
+				2200676220E48D7000A66BA6 /* Assets.xcassets */,
+				2200676420E48D7000A66BA6 /* Info.plist */,
+			);
+			path = "DevClicker Watch App";
+			sourceTree = "<group>";
+		};
+		2200676D20E48D7000A66BA6 /* DevClicker Watch App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */,
+				2256124D20E6477300424840 /* Interface Controllers */,
+				2256124920E62FAA00424840 /* WatchSessionManager.swift */,
+				2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */,
+				2200677220E48D7000A66BA6 /* NotificationController.swift */,
+				2200677420E48D7000A66BA6 /* ComplicationController.swift */,
+				2200677620E48D7100A66BA6 /* Assets.xcassets */,
+				2200677820E48D7100A66BA6 /* Info.plist */,
+				2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */,
+			);
+			path = "DevClicker Watch App Extension";
+			sourceTree = "<group>";
+		};
+		2256121B20E620CE00424840 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C60E383E20E02FA40091B073 /* AppShared.swift */,
+				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
+				C60E384020E046260091B073 /* Game */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2256124D20E6477300424840 /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */,
+				2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */,
+				2200678720E564A600A66BA6 /* RightInterfaceController.swift */,
+			);
+			path = "Interface Controllers";
+			sourceTree = "<group>";
+		};
 		911A1A7E9E0048BDD28A9BC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +255,6 @@
 			children = (
 				C6640E7320DF204F00EAB7EE /* Info.plist */,
 				C6640E6720DF204E00EAB7EE /* AppDelegate.swift */,
-				C60E383E20E02FA40091B073 /* AppShared.swift */,
 				C65D5F7020E0C1BB00E69339 /* Notes.swift */,
 			);
 			path = "App Support";
@@ -151,6 +299,9 @@
 			isa = PBXGroup;
 			children = (
 				C6640E6620DF204E00EAB7EE /* DevClicker */,
+				2200675E20E48D6F00A66BA6 /* DevClicker Watch App */,
+				2256121B20E620CE00424840 /* Shared */,
+				2200676D20E48D7000A66BA6 /* DevClicker Watch App Extension */,
 				C6640E6520DF204E00EAB7EE /* Products */,
 				911A1A7E9E0048BDD28A9BC2 /* Pods */,
 				09C636B88E21E16855EA478B /* Frameworks */,
@@ -161,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				C6640E6420DF204E00EAB7EE /* DevClicker.app */,
+				2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */,
+				2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,13 +321,13 @@
 		C6640E6620DF204E00EAB7EE /* DevClicker */ = {
 			isa = PBXGroup;
 			children = (
+				22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */,
+				C60E383D20E02F790091B073 /* App Support */,
 				C6640E8120DF5CB200EAB7EE /* App Media */,
 				C6640E7D20DF564F00EAB7EE /* Database */,
-				C60E383D20E02F790091B073 /* App Support */,
 				C65D5F6D20E0B98300E69339 /* Functionalities */,
 				C6640E7E20DF567100EAB7EE /* Data Structures */,
 				C60E384720E0A2640091B073 /* Factories */,
-				C60E384020E046260091B073 /* Game */,
 				C6640E7C20DF564900EAB7EE /* Persistence */,
 				C6640E7B20DF563A00EAB7EE /* Services */,
 				C6640E7920DF561D00EAB7EE /* View Controllers */,
@@ -216,7 +369,7 @@
 		C6640E7C20DF564900EAB7EE /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
+				2256124720E62D7F00424840 /* WatchSessionManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -261,6 +414,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2200675C20E48D6F00A66BA6 /* DevClicker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2200678120E48D7100A66BA6 /* Build configuration list for PBXNativeTarget "DevClicker Watch App" */;
+			buildPhases = (
+				2200675B20E48D6F00A66BA6 /* Resources */,
+				2200678020E48D7100A66BA6 /* Embed App Extensions */,
+				A3126962B00908A3877794EC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2200676C20E48D7000A66BA6 /* PBXTargetDependency */,
+			);
+			name = "DevClicker Watch App";
+			productName = "DevClicker Watch App";
+			productReference = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2200676820E48D7000A66BA6 /* DevClicker Watch App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2200677D20E48D7100A66BA6 /* Build configuration list for PBXNativeTarget "DevClicker Watch App Extension" */;
+			buildPhases = (
+				2200676520E48D7000A66BA6 /* Sources */,
+				2200676620E48D7000A66BA6 /* Frameworks */,
+				2200676720E48D7000A66BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DevClicker Watch App Extension";
+			productName = "DevClicker Watch App Extension";
+			productReference = 2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		C6640E6320DF204E00EAB7EE /* DevClicker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6640E7620DF204F00EAB7EE /* Build configuration list for PBXNativeTarget "DevClicker" */;
@@ -270,10 +458,14 @@
 				C6640E6120DF204E00EAB7EE /* Frameworks */,
 				C6640E6220DF204E00EAB7EE /* Resources */,
 				C61B4CBD20E27946007CB091 /* ShellScript */,
+				2200678420E48D7100A66BA6 /* Embed Watch Content */,
+				B41282B306C1F47DBB9365A6 /* [CP] Embed Pods Frameworks */,
+				446013B7F6AF34F2724392A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2200677B20E48D7100A66BA6 /* PBXTargetDependency */,
 			);
 			name = DevClicker;
 			productName = DevClicker;
@@ -290,8 +482,29 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Rodrigo Hilkner";
 				TargetAttributes = {
+					2200675C20E48D6F00A66BA6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					2200676820E48D7000A66BA6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
 					C6640E6320DF204E00EAB7EE = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -309,11 +522,31 @@
 			projectRoot = "";
 			targets = (
 				C6640E6320DF204E00EAB7EE /* DevClicker */,
+				2200675C20E48D6F00A66BA6 /* DevClicker Watch App */,
+				2200676820E48D7000A66BA6 /* DevClicker Watch App Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2200675B20E48D6F00A66BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2200676320E48D7000A66BA6 /* Assets.xcassets in Resources */,
+				2200676120E48D6F00A66BA6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2200676720E48D7000A66BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F41AA420E5DD49001FCFDA /* upgrades.json in Resources */,
+				2200677720E48D7100A66BA6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6640E6220DF204E00EAB7EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +580,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		446013B7F6AF34F2724392A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DevClicker/Pods-DevClicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B41282B306C1F47DBB9365A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DevClicker/Pods-DevClicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C61B4CBD20E27946007CB091 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +626,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2200676520E48D7000A66BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2200677320E48D7000A66BA6 /* NotificationController.swift in Sources */,
+				2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */,
+				22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */,
+				2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */,
+				22F41A9C20E5CFA4001FCFDA /* AppShared.swift in Sources */,
+				22F41AA120E5DD36001FCFDA /* MarketData.swift in Sources */,
+				2200677520E48D7000A66BA6 /* ComplicationController.swift in Sources */,
+				22F41AA620E5DD51001FCFDA /* MarketServices.swift in Sources */,
+				22F41AA820E5DD56001FCFDA /* UpgradeServices.swift in Sources */,
+				2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */,
+				22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */,
+				2256124C20E638E400424840 /* Game.swift in Sources */,
+				22F41AA220E5DD38001FCFDA /* Upgrade.swift in Sources */,
+				2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */,
+				22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */,
+				2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */,
+				22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */,
+				2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */,
+				22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */,
+				22F41AA320E5DD3F001FCFDA /* ExponentialOperator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6640E6020DF204E00EAB7EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +670,7 @@
 				C60E384420E096440091B073 /* UserDefaultsPersistence.swift in Sources */,
 				C60E383F20E02FA40091B073 /* AppShared.swift in Sources */,
 				C6640E6820DF204E00EAB7EE /* AppDelegate.swift in Sources */,
+				2256124820E62D7F00424840 /* WatchSessionManager.swift in Sources */,
 				C61B4CC520E293D2007CB091 /* GameData.swift in Sources */,
 				C61B4CC920E29B5D007CB091 /* UpgradeServices.swift in Sources */,
 				C60E383C20E02DD90091B073 /* MarketServices.swift in Sources */,
@@ -394,7 +685,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2200676C20E48D7000A66BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2200676820E48D7000A66BA6 /* DevClicker Watch App Extension */;
+			targetProxy = 2200676B20E48D7000A66BA6 /* PBXContainerItemProxy */;
+		};
+		2200677B20E48D7100A66BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2200675C20E48D6F00A66BA6 /* DevClicker Watch App */;
+			targetProxy = 2200677A20E48D7100A66BA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		2200675F20E48D6F00A66BA6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2200676020E48D6F00A66BA6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		C6640E6B20DF204E00EAB7EE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +726,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2200677E20E48D7100A66BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
+				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		2200677F20E48D7100A66BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
+				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		2200678220E48D7100A66BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
+				IBSC_MODULE = DevClicker_Watch_App_Extension;
+				INFOPLIST_FILE = "DevClicker Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		2200678320E48D7100A66BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
+				IBSC_MODULE = DevClicker_Watch_App_Extension;
+				INFOPLIST_FILE = "DevClicker Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = xpt.DevClicker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 		C6640E7420DF204F00EAB7EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -534,7 +930,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,7 +949,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMM2SSNKR5;
+				DEVELOPMENT_TEAM = D7J47JG8UC;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,6 +965,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2200677D20E48D7100A66BA6 /* Build configuration list for PBXNativeTarget "DevClicker Watch App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2200677E20E48D7100A66BA6 /* Debug */,
+				2200677F20E48D7100A66BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2200678120E48D7100A66BA6 /* Build configuration list for PBXNativeTarget "DevClicker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2200678220E48D7100A66BA6 /* Debug */,
+				2200678320E48D7100A66BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6640E5F20DF204E00EAB7EE /* Build configuration list for PBXProject "DevClicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

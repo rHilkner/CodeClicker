@@ -89,7 +89,7 @@ class Game {
 
                 lastTime = currentTime
                 loopCounter += 1
-                if loopCounter == 100000 {
+                if loopCounter == 10000 {
                     UserDefaultsPersistence.save(game: self)
                     loopCounter = 0
                 }

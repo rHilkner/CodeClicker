@@ -10,19 +10,22 @@ import Foundation
 
 class UserDefaultsPersistence {
 
+    private static let defaults = UserDefaults.standard
+    
     static func save(game: Game) {
         guard let encodedPlayerStats = try? JSONEncoder().encode(game.gameStats) else {
             print("-> ERROR: coudn't save game data to User Defaults")
             return
         }
-
+    
         print("-> INFO: Saving user data to User Defaults")
-        UserDefaults.standard.set(encodedPlayerStats, forKey: "gameStats")
+        defaults.set(encodedPlayerStats, forKey: "gameStats")
     }
-
+    
     static func loadGame() -> Game {
+        
         // Parsing player stats from data
-        guard let gameData = UserDefaults.standard.data(forKey: "gameStats"),
+        guard let gameData = defaults.data(forKey: "gameStats"),
             var gameStats = try? JSONDecoder().decode(GameData.self, from: gameData) as GameData else {
                 print("-> ERROR: coudn't load player stats from User Defaults")
                 return Game()

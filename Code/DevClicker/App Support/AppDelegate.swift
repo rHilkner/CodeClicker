@@ -6,9 +6,8 @@
 //  Copyright © 2018 Rodrigo Hilkner. All rights reserved.
 //
 
-// swiftlint:disable line_length
-
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let game = UserDefaultsPersistence.loadGame()
         AppShared.game = game
         AppShared.game.executeGameLoop()
+        
+        // Set up and activate your session early here!
+        WatchSessionManager.sharedManager.startSession()
 
         return true
     }
