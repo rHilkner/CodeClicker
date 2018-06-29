@@ -58,7 +58,7 @@ class Game {
 
                 DispatchQueue.main.sync {
                     // Calculating production of LoC by devs
-                    let locProductionPerSec = Double(CodeServices.calculateDevLocProduction())
+                    let locProductionPerSec = Double(CodeServices.calculateDevLocProduction(game: self))
                     if locProductionPerSec == 0 {
                         locProductionFractionRemained = 0
                     }
@@ -71,7 +71,7 @@ class Game {
                     if self.gameStats.playerStats.loc == 0 {
                         locSoldFractionRemained = 0
                     }
-                    locDemand = MarketServices.calculateLocDemand()
+                    locDemand = MarketServices.calculateLocDemand(game: self)
                     locToSell = min(Double(self.gameStats.playerStats.loc),
                                     locDemand * timeInterval + locSoldFractionRemained)
                     locSold = Int(locToSell)
@@ -89,8 +89,8 @@ class Game {
 
                 lastTime = currentTime
                 loopCounter += 1
-                if loopCounter == 10000 {
-                    UserDefaultsPersistence.save(game: self)
+                if loopCounter == 100000 {
+                    UserDefaultsPersistence.saveGame()
                     loopCounter = 0
                 }
             }

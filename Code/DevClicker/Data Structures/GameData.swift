@@ -13,6 +13,7 @@ struct GameData: Codable {
     var productionStats: ProductionData
     var marketStats: MarketData
     var upgradesAvailable: [Upgrade]
+    var lastSaveTimeInterval: TimeInterval = 0.0
 
     init() {
         self.playerStats = PlayerData()

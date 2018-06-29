@@ -15,7 +15,6 @@ class UpgradesTableViewCell: UITableViewCell {
     @IBOutlet weak var dolCostLabel: UILabel!
     @IBOutlet weak var locCostLabel: UILabel!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
