@@ -26,7 +26,7 @@ class CodingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.coffeMktSlider.minimumValue = 0.0
         self.coffeMktSlider.maximumValue = 2.0
         self.coffeMktSlider.value = Float(AppShared.game.gameStats.playerStats.coffeeMktRate)
@@ -89,6 +89,8 @@ extension CodingViewController: GameDelegate {
                                           for: .normal)
         self.addPcButton.setTitle(String(format: "+PC (D$ %.2f): %d", marketStats.pcPrice, playerStats.pcs),
                                   for: .normal)
+        
+        try? WatchSessionManager.sharedManager.updateGame(game: AppShared.game)
     }
 
 }

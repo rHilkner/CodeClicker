@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khS-Q1-IJl">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Left Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="LeftInterfaceController" customModule="DevClicker_Watch_App_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="IyB-fv-seM">
+                            <items>
+                                <label alignment="left" text="LoC" id="XHx-1s-uvx"/>
+                                <label alignment="left" text="3789" id="uTS-kc-SFD"/>
+                                <label alignment="right" text="D$" id="QPy-nU-GJO"/>
+                                <label alignment="right" text="5.00" id="efa-JN-wBu"/>
+                            </items>
+                        </group>
+                        <group width="1" height="125" alignment="left" id="Yw8-Id-xpa">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" id="vD9-Zq-Plz">
+                                    <items>
+                                        <button width="1" alignment="left" title="✚" id="fdL-ie-3NV"/>
+                                        <label alignment="center" text="&lt;/&gt;" id="FVJ-o1-caT"/>
+                                        <label height="20" alignment="center" text="56" id="HQE-jw-PJu"/>
+                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="quw-Hk-y05"/>
+                                    </items>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" id="JO7-YO-fHC">
+                                    <items>
+                                        <button width="1" alignment="left" title="✚" id="4Zn-Z3-mNa"/>
+                                        <label alignment="center" text="🖥" id="bXd-ZT-JO2"/>
+                                        <label alignment="center" text="59" id="sWo-hT-Fzy"/>
+                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="Xmm-qr-AbY"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="T3i-tf-bTc" kind="relationship" relationship="nextPage" id="mq0-eF-uxX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-146" y="337"/>
+        </scene>
+        <!--Middle Interface Controller-->
+        <scene sceneID="YWW-TQ-xK6">
+            <objects>
+                <controller id="T3i-tf-bTc" customClass="MiddleInterfaceController" customModule="DevClicker_Watch_App_Extension">
+                    <items>
+                        <group width="136" height="151" alignment="left" layout="vertical" id="Frf-nO-tyj">
+                            <items>
+                                <group width="1" alignment="left" id="5fp-ac-kkD">
+                                    <items>
+                                        <label alignment="left" text="LoC" id="iwU-rC-fqu"/>
+                                        <label alignment="left" text="3789" id="0r2-Pj-XlG"/>
+                                        <label alignment="right" text="D$" id="QUt-k5-QTW"/>
+                                        <label alignment="right" text="5.00" id="rFN-sZ-eKf"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="dLm-V8-adz">
+                                    <items>
+                                        <label alignment="left" text="LoC/s" id="I4K-pV-Y8j"/>
+                                        <label alignment="right" text="D$/s" id="VcU-a8-gGk"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="QMd-nL-1TX">
+                                    <items>
+                                        <label alignment="left" text="3789" id="949-cK-kr6"/>
+                                        <label alignment="right" text="5.00" id="Hkw-tx-g0l"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="bottom" id="xNx-JE-dBr">
+                                    <items>
+                                        <label alignment="left" text="&lt;/&gt;" id="rcw-9f-b4u"/>
+                                        <label alignment="left" text="56" id="S1t-0u-wWJ"/>
+                                        <label alignment="right" text="📺" id="Vyy-mK-t82"/>
+                                        <label alignment="right" text="7" id="SgO-UC-5tL"/>
+                                    </items>
+                                </group>
+                                <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="3" steps="3" id="p20-z6-Xd2"/>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="c9U-30-5nd"/>
+                            </gestureRecognizers>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="eP4-8n-cEB" kind="relationship" relationship="nextPage" id="l9z-P3-AGK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="349"/>
+        </scene>
+        <!--Right Interface Controller-->
+        <scene sceneID="IBy-Ip-2FT">
+            <objects>
+                <controller id="eP4-8n-cEB" customClass="RightInterfaceController" customModule="DevClicker_Watch_App_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="OSD-o1-KWO">
+                            <items>
+                                <label alignment="left" text="LoC" id="zjJ-1i-45i"/>
+                                <label alignment="left" text="3789" id="Ral-Id-ko3"/>
+                                <label alignment="right" text="D$" id="HwB-ZD-hTm"/>
+                                <label alignment="right" text="5.00" id="TaB-HK-y6p"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="aWS-oj-6aK">
+                            <items>
+                                <tableRow id="lZf-pW-1Et">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" spacing="0.0" id="s2a-ZE-QSi">
+                                        <items>
+                                            <label width="116" alignment="left" text="UPGRADE" textAlignment="center" id="teh-H9-fqm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                            </label>
+                                            <label alignment="left" text="description" id="FXM-tt-GoG">
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="10"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="583" y="337"/>
+        </scene>
+        <!--MarketInterfaceController-->
+        <scene sceneID="0X9-bQ-Vnt">
+            <objects>
+                <controller identifier="MarketInterfaceController" hidesWhenLoading="NO" id="khS-Q1-IJl">
+                    <items>
+                        <group width="1" height="119" alignment="left" layout="vertical" id="enZ-V5-ncf">
+                            <items>
+                                <button width="1" alignment="left" title="+" id="1Kh-v5-Wi6"/>
+                                <label alignment="center" verticalAlignment="center" text="📺" id="16s-6N-77i">
+                                    <fontDescription key="font" type="system" pointSize="36"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="7" id="Nlo-ZI-kRx">
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="center" text="D$400.00" id="MeO-zB-7t9"/>
+                    </items>
+                    <connections>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="Xy5-A3-lXS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-460" y="337"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="DevClicker_Watch_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
