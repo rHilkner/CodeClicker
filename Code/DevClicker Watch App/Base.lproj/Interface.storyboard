@@ -141,6 +141,13 @@
                                     </connections>
                                 </slider>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="bVx-MW-IxT">
+                                    <connections>
+                                        <action selector="codeLocTapped:" destination="T3i-tf-bTc" id="pzT-5s-HpE"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                         </group>
                     </items>
                     <connections>
