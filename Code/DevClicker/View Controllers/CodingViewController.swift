@@ -13,6 +13,7 @@ class CodingViewController: UIViewController {
     // Labels
     @IBOutlet weak var dolLabel: UILabel!
     @IBOutlet weak var locLabel: UILabel!
+    @IBOutlet weak var pcCountLabel: UILabel!
     @IBOutlet weak var coffeMktSlider: UISlider!
     @IBOutlet weak var numDevsLabel: UILabel!
     @IBOutlet weak var locPerSecLabel: UILabel!
@@ -74,20 +75,21 @@ extension CodingViewController: GameDelegate {
         let playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
 
-        self.dolLabel.text = String(format: "dól: D$ %.2f", playerStats.dols)
-        self.locLabel.text = "Lines of Code: \(UIServices.locStringFormat(loc: playerStats.loc))"
-        self.numDevsLabel.text = "#devs: \(playerStats.devs)"
-        self.locPerSecLabel.text = String(format: "#loc/s: (%.2f)", CodeServices.calculateDevLocProduction(game: AppShared.game))
-        self.mktLvlLabel.text = "#mkt lvl: \(playerStats.marketingLevel)"
-        self.sellPerSecLabel.text = String(format: "#sell/s: (%.2f)", MarketServices.calculateLocDemand(game: AppShared.game))
+        self.dolLabel.text = UIServices.dolStringFormat(dol: playerStats.dols)
+        self.locLabel.text = UIServices.locStringFormat(loc: playerStats.loc)
+        self.pcCountLabel.text = "\(playerStats.pcs)"
+        self.numDevsLabel.text = "\(playerStats.devs)"
+        self.locPerSecLabel.text = String(format: "%.2f", CodeServices.calculateDevLocProduction(game: AppShared.game))
+        self.mktLvlLabel.text = "\(playerStats.marketingLevel)"
+        self.sellPerSecLabel.text = String(format: "%.2f", MarketServices.calculateLocDemand(game: AppShared.game))
 
         // Setting correct prices to button titles
-        self.hireDevButton.setTitle(String(format: "+dev\n(D$ %.2f)", marketStats.devsPrice),
-                                    for: .normal)
-        self.upgradeMktLvlButton.setTitle(String(format: "+mktlvl\n(D$ %.2f)", marketStats.upgradeMktPrice),
-                                          for: .normal)
-        self.addPcButton.setTitle(String(format: "+PC (D$ %.2f): %d", marketStats.pcPrice, playerStats.pcs),
-                                  for: .normal)
+//        self.hireDevButton.setTitle(String(format: "+dev\n(D$ %.2f)", marketStats.devsPrice),
+//                                    for: .normal)
+//        self.upgradeMktLvlButton.setTitle(String(format: "+mktlvl\n(D$ %.2f)", marketStats.upgradeMktPrice),
+//                                          for: .normal)
+//        self.addPcButton.setTitle(String(format: "+PC (D$ %.2f): %d", marketStats.pcPrice, playerStats.pcs),
+//                                  for: .normal)
     }
 
 }
