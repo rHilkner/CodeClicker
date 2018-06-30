@@ -30,24 +30,12 @@ class MiddleInterfaceController: WKInterfaceController {
     @IBAction func sliderChanged(_ value: Float) {
         AppShared.game.gameStats.playerStats.coffeeMktRate = Double(value)
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }
 
 extension MiddleInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
-        let marketStats = AppShared.game.gameStats.marketStats
         
         self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
         self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))

@@ -73,7 +73,6 @@ extension CodingViewController: GameDelegate {
     func updateStats() {
         // Setting correct data to labels
         let playerStats = AppShared.game.gameStats.playerStats
-        let marketStats = AppShared.game.gameStats.marketStats
 
         self.dolLabel.text = UIServices.dolStringFormat(dol: playerStats.dols)
         self.locLabel.text = UIServices.locStringFormat(loc: playerStats.loc)

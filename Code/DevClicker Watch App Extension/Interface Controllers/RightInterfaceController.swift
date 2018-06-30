@@ -22,27 +22,15 @@ class RightInterfaceController: WKInterfaceController {
         
     }
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }
 
 extension RightInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
-        let marketStats = AppShared.game.gameStats.marketStats
         
-        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
-        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
+        self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
     }
-    
 }
 

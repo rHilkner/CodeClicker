@@ -35,8 +35,6 @@ class Game {
         DispatchQueue.global().async {
             let gameLoopFrequency: Double = 5.0
             let gameLoopPeriod: Double = 1/gameLoopFrequency
-            
-            var loopCounter = 0
 
             var lastTime = Date()
             var currentTime = lastTime

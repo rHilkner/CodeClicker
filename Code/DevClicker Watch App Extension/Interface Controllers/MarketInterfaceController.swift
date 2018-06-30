@@ -14,7 +14,7 @@ class MarketInterfaceController: WKInterfaceController {
 
     @IBOutlet var locLabel: WKInterfaceLabel!
     @IBOutlet var dolLabel: WKInterfaceLabel!
-    @IBOutlet var mktLabel: WKInterfaceLabel!
+    @IBOutlet var mktLvlPriceLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -24,6 +24,7 @@ class MarketInterfaceController: WKInterfaceController {
     }
     
     @IBAction func mktLvlUp() {
+        PlayerActionsServices.upgradeMarketingTapped()
     }
     
     override func willActivate() {
@@ -44,8 +45,9 @@ extension MarketInterfaceController: GameDelegate {
         let playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
         
-        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
-        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
+        self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
+        self.mktLvlPriceLabel.setText("D$ " + String(WatchUIServices.dolStringFormat(dol: marketStats.upgradeMktPrice)))
     }
     
 }

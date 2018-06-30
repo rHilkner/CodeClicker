@@ -27,11 +27,13 @@ class LeftInterfaceController: WKInterfaceController {
     }
     
     @IBAction func devUp() {
+        PlayerActionsServices.hireDevTapped()
     }
     
     @IBAction func pcUp() {
+        PlayerActionsServices.addPcTapped()
     }
-
+    
 }
 
 extension LeftInterfaceController: GameDelegate {
@@ -40,8 +42,12 @@ extension LeftInterfaceController: GameDelegate {
         let playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
         
-        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
-        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
+        self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
+        self.devAmountLabel.setText(String(format: "%d", playerStats.devs))
+        self.pcAmountLabel.setText(String(format: "%d", playerStats.pcs))
+        self.devPriceLabel.setText("D$ " + String(WatchUIServices.dolStringFormat(dol: marketStats.devsPrice)))
+        self.pcPriceLabel.setText("D$ " + String(WatchUIServices.dolStringFormat(dol: marketStats.pcPrice)))
     }
     
 }

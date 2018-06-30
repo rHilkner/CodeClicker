@@ -244,7 +244,7 @@
                     <connections>
                         <outlet property="dolLabel" destination="2dV-Gf-3qg" id="Vdh-3U-UIE"/>
                         <outlet property="locLabel" destination="JTa-mB-svG" id="nhP-2X-5ff"/>
-                        <outlet property="mktLabel" destination="MeO-zB-7t9" id="uGJ-9l-tte"/>
+                        <outlet property="mktLvlPriceLabel" destination="MeO-zB-7t9" id="uGJ-9l-tte"/>
                         <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="Xy5-A3-lXS"/>
                     </connections>
                 </controller>
