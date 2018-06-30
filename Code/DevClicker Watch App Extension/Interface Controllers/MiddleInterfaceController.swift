@@ -26,6 +26,10 @@ class MiddleInterfaceController: WKInterfaceController {
         
         AppShared.game.gameDelegate.append(self)
     }
+
+    @IBAction func codeLocTapped(_ sender: Any) {
+        PlayerActionsServices.codeLocTapped()
+    }
     
     @IBAction func sliderChanged(_ value: Float) {
         AppShared.game.gameStats.playerStats.coffeeMktRate = Double(value)
