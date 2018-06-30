@@ -12,10 +12,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         
+        WatchSessionManager.sharedManager.startSession()
+        
         AppShared.game = UserDefaultsPersistence.loadGame()
         AppShared.game.executeGameLoop()
-        
-        WatchSessionManager.sharedManager.startSession()
     }
 
     func applicationDidBecomeActive() {

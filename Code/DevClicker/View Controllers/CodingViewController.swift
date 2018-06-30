@@ -34,12 +34,11 @@ class CodingViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        AppShared.game.gameDelegate = self
-        self.updateStats()
+        AppShared.game.gameDelegate.append(self)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        AppShared.game.gameDelegate = nil
+        AppShared.game.gameDelegate.removeAll()
     }
 
     @IBAction func codeButtonPressed() {

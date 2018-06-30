@@ -12,11 +12,20 @@ import Foundation
 
 class MarketInterfaceController: WKInterfaceController {
 
+    @IBOutlet var locLabel: WKInterfaceLabel!
+    @IBOutlet var dolLabel: WKInterfaceLabel!
+    @IBOutlet var mktLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        AppShared.game.gameDelegate.append(self)
+        
     }
-
+    
+    @IBAction func mktLvlUp() {
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -28,3 +37,16 @@ class MarketInterfaceController: WKInterfaceController {
     }
 
 }
+
+extension MarketInterfaceController: GameDelegate {
+    
+    func updateStats() {
+        let playerStats = AppShared.game.gameStats.playerStats
+        let marketStats = AppShared.game.gameStats.marketStats
+        
+        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
+        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+    }
+    
+}
+

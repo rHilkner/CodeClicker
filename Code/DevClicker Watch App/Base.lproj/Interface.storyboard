@@ -14,36 +14,62 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="LeftInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
-                        <group width="1" alignment="left" id="IyB-fv-seM">
+                        <group width="1" alignment="left" id="7cu-6p-A9e">
                             <items>
-                                <label alignment="left" text="LoC" id="XHx-1s-uvx"/>
-                                <label alignment="left" text="3789" id="uTS-kc-SFD"/>
-                                <label alignment="right" text="D$" id="QPy-nU-GJO"/>
-                                <label alignment="right" text="5.00" id="efa-JN-wBu"/>
+                                <label alignment="left" text="LoC" id="TVw-pS-Nd2">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="3789" id="Gsn-wD-6Rq">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                </label>
+                                <label alignment="right" text="D$" id="gVQ-Lg-ww1">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="right" text="3789" id="FaY-ph-Yic">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" height="125" alignment="left" id="Yw8-Id-xpa">
                             <items>
                                 <group width="0.5" height="1" alignment="left" layout="vertical" id="vD9-Zq-Plz">
                                     <items>
-                                        <button width="1" alignment="left" title="✚" id="fdL-ie-3NV"/>
+                                        <button width="1" alignment="left" title="✚" id="fdL-ie-3NV">
+                                            <connections>
+                                                <action selector="devUp" destination="AgC-eL-Hgc" id="qJa-Zk-Jms"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="nsy-R8-yIZ">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
                                         <label alignment="center" text="&lt;/&gt;" id="FVJ-o1-caT"/>
                                         <label height="20" alignment="center" text="56" id="HQE-jw-PJu"/>
-                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="quw-Hk-y05"/>
                                     </items>
                                 </group>
                                 <group width="0.5" height="1" alignment="left" layout="vertical" id="JO7-YO-fHC">
                                     <items>
-                                        <button width="1" alignment="left" title="✚" id="4Zn-Z3-mNa"/>
+                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="Xmm-qr-AbY">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
+                                        <button width="1" alignment="left" title="✚" id="4Zn-Z3-mNa">
+                                            <connections>
+                                                <action selector="pcUp" destination="AgC-eL-Hgc" id="OFw-10-0cO"/>
+                                            </connections>
+                                        </button>
                                         <label alignment="center" text="🖥" id="bXd-ZT-JO2"/>
                                         <label alignment="center" text="59" id="sWo-hT-Fzy"/>
-                                        <label alignment="center" verticalAlignment="bottom" text="D$50.00" id="Xmm-qr-AbY"/>
                                     </items>
                                 </group>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="devAmountLabel" destination="HQE-jw-PJu" id="CJa-aj-MYR"/>
+                        <outlet property="devPriceLabel" destination="nsy-R8-yIZ" id="wr1-Th-gGt"/>
+                        <outlet property="dolLabel" destination="FaY-ph-Yic" id="ICC-3i-g2w"/>
+                        <outlet property="locLabel" destination="Gsn-wD-6Rq" id="bjU-tR-CAQ"/>
+                        <outlet property="pcAmountLabel" destination="sWo-hT-Fzy" id="00x-gY-1ew"/>
+                        <outlet property="pcPriceLabel" destination="Xmm-qr-AbY" id="Mpr-d9-gAO"/>
                         <segue destination="T3i-tf-bTc" kind="relationship" relationship="nextPage" id="mq0-eF-uxX"/>
                     </connections>
                 </controller>
@@ -59,40 +85,72 @@
                             <items>
                                 <group width="1" alignment="left" id="5fp-ac-kkD">
                                     <items>
-                                        <label alignment="left" text="LoC" id="iwU-rC-fqu"/>
-                                        <label alignment="left" text="3789" id="0r2-Pj-XlG"/>
-                                        <label alignment="right" text="D$" id="QUt-k5-QTW"/>
-                                        <label alignment="right" text="5.00" id="rFN-sZ-eKf"/>
+                                        <label alignment="left" text="LoC" id="iwU-rC-fqu">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="3789" id="0r2-Pj-XlG">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="D$" id="8TA-iu-OD0">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="3789" id="nEq-29-3ar">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" id="dLm-V8-adz">
                                     <items>
-                                        <label alignment="left" text="LoC/s" id="I4K-pV-Y8j"/>
-                                        <label alignment="right" text="D$/s" id="VcU-a8-gGk"/>
+                                        <label alignment="left" text="LoC/s" id="kqx-MN-FO4">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="D$/s" id="Jxr-CF-8cr">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="QMd-nL-1TX">
+                                <group width="134" height="17" alignment="left" id="QMd-nL-1TX">
                                     <items>
-                                        <label alignment="left" text="3789" id="949-cK-kr6"/>
-                                        <label alignment="right" text="5.00" id="Hkw-tx-g0l"/>
+                                        <label alignment="left" text="3789" id="77I-0M-2mq">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="3789" id="P5K-Mt-LFf">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" verticalAlignment="bottom" id="xNx-JE-dBr">
+                                <group width="134" alignment="left" verticalAlignment="bottom" id="xNx-JE-dBr">
                                     <items>
-                                        <label alignment="left" text="&lt;/&gt;" id="rcw-9f-b4u"/>
-                                        <label alignment="left" text="56" id="S1t-0u-wWJ"/>
-                                        <label alignment="right" text="📺" id="Vyy-mK-t82"/>
-                                        <label alignment="right" text="7" id="SgO-UC-5tL"/>
+                                        <label alignment="left" text="&lt;/&gt;" id="rcw-9f-b4u">
+                                            <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="56" id="S1t-0u-wWJ">
+                                            <fontDescription key="font" type="system" pointSize="18"/>
+                                        </label>
+                                        <label alignment="right" text="📺" id="Vyy-mK-t82">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                        <label alignment="right" text="7" id="SgO-UC-5tL">
+                                            <fontDescription key="font" type="system" pointSize="18"/>
+                                        </label>
                                     </items>
                                 </group>
-                                <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="3" steps="3" id="p20-z6-Xd2"/>
+                                <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="2" steps="10" id="p20-z6-Xd2">
+                                    <connections>
+                                        <action selector="sliderChanged:" destination="T3i-tf-bTc" id="q6E-YN-Nnp"/>
+                                    </connections>
+                                </slider>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="devsLabel" destination="S1t-0u-wWJ" id="ZXO-tA-exd"/>
-                        <outlet property="dolLabel" destination="rFN-sZ-eKf" id="OEd-d1-AHb"/>
-                        <outlet property="locLabel" destination="0r2-Pj-XlG" id="zvP-si-8Ef"/>
+                        <outlet property="devAmountLabel" destination="S1t-0u-wWJ" id="IIT-9S-Jaw"/>
+                        <outlet property="dolLabel" destination="nEq-29-3ar" id="8p0-b8-bky"/>
+                        <outlet property="dolRateLabel" destination="P5K-Mt-LFf" id="0Ae-a7-qTd"/>
+                        <outlet property="locLabel" destination="0r2-Pj-XlG" id="3hj-8m-j1r"/>
+                        <outlet property="locRateLabel" destination="77I-0M-2mq" id="q1f-vl-Hip"/>
+                        <outlet property="mktLvlLabel" destination="SgO-UC-5tL" id="mX6-Si-cTf"/>
+                        <outlet property="slider" destination="p20-z6-Xd2" id="YeN-9Z-Evk"/>
                         <segue destination="eP4-8n-cEB" kind="relationship" relationship="nextPage" id="l9z-P3-AGK"/>
                     </connections>
                 </controller>
@@ -104,17 +162,25 @@
             <objects>
                 <controller id="eP4-8n-cEB" customClass="RightInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
-                        <group width="1" alignment="left" id="OSD-o1-KWO">
+                        <group width="1" alignment="left" id="Tj3-ed-sGI">
                             <items>
-                                <label alignment="left" text="LoC" id="zjJ-1i-45i"/>
-                                <label alignment="left" text="3789" id="Ral-Id-ko3"/>
-                                <label alignment="right" text="D$" id="HwB-ZD-hTm"/>
-                                <label alignment="right" text="5.00" id="TaB-HK-y6p"/>
+                                <label alignment="left" text="LoC" id="4Kn-kD-8ko">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="3789" id="Whq-xF-ZZu">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                </label>
+                                <label alignment="right" text="D$" id="Rth-Fz-DNp">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="right" text="3789" id="q9I-yp-Gcf">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                </label>
                             </items>
                         </group>
                         <table alignment="left" id="aWS-oj-6aK">
                             <items>
-                                <tableRow id="lZf-pW-1Et">
+                                <tableRow identifier="upgrade" id="lZf-pW-1Et">
                                     <group key="rootItem" width="1" alignment="left" layout="vertical" spacing="0.0" id="s2a-ZE-QSi">
                                         <items>
                                             <label width="116" alignment="left" text="UPGRADE" textAlignment="center" id="teh-H9-fqm">
@@ -129,6 +195,10 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="dolLabel" destination="q9I-yp-Gcf" id="kVf-rI-APJ"/>
+                        <outlet property="locLabel" destination="Whq-xF-ZZu" id="Thl-kp-8iy"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="478" y="337"/>
@@ -140,7 +210,27 @@
                     <items>
                         <group width="1" height="119" alignment="left" layout="vertical" id="enZ-V5-ncf">
                             <items>
-                                <button width="1" alignment="left" title="+" id="1Kh-v5-Wi6"/>
+                                <group width="1" alignment="left" id="6Ij-sx-ZDi">
+                                    <items>
+                                        <label alignment="left" text="LoC" id="lYO-wk-4Ej">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="3789" id="JTa-mB-svG">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="D$" id="bKv-xZ-Gjf">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="right" text="3789" id="2dV-Gf-3qg">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" title="+" id="1Kh-v5-Wi6">
+                                    <connections>
+                                        <action selector="mktLvlUp" destination="khS-Q1-IJl" id="OJE-Xy-NI3"/>
+                                    </connections>
+                                </button>
                                 <label alignment="center" verticalAlignment="center" text="📺" id="16s-6N-77i">
                                     <fontDescription key="font" type="system" pointSize="36"/>
                                 </label>
@@ -152,34 +242,14 @@
                         <label alignment="center" verticalAlignment="center" text="D$400.00" id="MeO-zB-7t9"/>
                     </items>
                     <connections>
+                        <outlet property="dolLabel" destination="2dV-Gf-3qg" id="Vdh-3U-UIE"/>
+                        <outlet property="locLabel" destination="JTa-mB-svG" id="nhP-2X-5ff"/>
+                        <outlet property="mktLabel" destination="MeO-zB-7t9" id="uGJ-9l-tte"/>
                         <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="Xy5-A3-lXS"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-460" y="337"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="168" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="DevClicker_Watch_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="478" y="643"/>
         </scene>
     </scenes>
 </document>

@@ -18,6 +18,7 @@
 		2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */; };
 		2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */; };
 		2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* RightInterfaceController.swift */; };
+		22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA320E71D8F0097990D /* WatchUIServices.swift */; };
 		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
 		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
@@ -133,6 +134,7 @@
 		2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleInterfaceController.swift; sourceTree = "<group>"; };
 		2200678720E564A600A66BA6 /* RightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightInterfaceController.swift; sourceTree = "<group>"; };
+		22221FA320E71D8F0097990D /* WatchUIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUIServices.swift; sourceTree = "<group>"; };
 		2256124920E62FAA00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInterfaceController.swift; sourceTree = "<group>"; };
 		22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevClicker.entitlements; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				C61B4CB920E1B4BC007CB091 /* CodeServices.swift */,
 				C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */,
 				C6A78B6D20E69F740034F7D6 /* UIServices.swift */,
+				22221FA320E71D8F0097990D /* WatchUIServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				22F41AA620E5DD51001FCFDA /* MarketServices.swift in Sources */,
 				22F41AA820E5DD56001FCFDA /* UpgradeServices.swift in Sources */,
 				2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */,
+				22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */,
 				22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */,
 				229004A520E6C92900C04776 /* UIServices.swift in Sources */,
 				2256124C20E638E400424840 /* Game.swift in Sources */,

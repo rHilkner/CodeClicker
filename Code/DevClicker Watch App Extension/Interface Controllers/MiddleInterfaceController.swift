@@ -13,14 +13,22 @@ class MiddleInterfaceController: WKInterfaceController {
     
     @IBOutlet var locLabel: WKInterfaceLabel!
     @IBOutlet var dolLabel: WKInterfaceLabel!
-    @IBOutlet var devsLabel: WKInterfaceLabel!
+    @IBOutlet var locRateLabel: WKInterfaceLabel!
+    @IBOutlet var dolRateLabel: WKInterfaceLabel!
+    @IBOutlet var devAmountLabel: WKInterfaceLabel!
+    @IBOutlet var mktLvlLabel: WKInterfaceLabel!
+    @IBOutlet var slider: WKInterfaceSlider!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         self.becomeCurrentPage()
         
-        AppShared.game.gameDelegate = self
+        AppShared.game.gameDelegate.append(self)
+    }
+    
+    @IBAction func sliderChanged(_ value: Float) {
+        AppShared.game.gameStats.playerStats.coffeeMktRate = Double(value)
     }
 
     override func willActivate() {
@@ -41,12 +49,12 @@ extension MiddleInterfaceController: GameDelegate {
         let playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
         
-        self.dolLabel.setText(String(format: "%.2f", playerStats.dols))
-         
-        self.locLabel.setText(String(format: "%.2f", playerStats.loc))
-    
-        self.devsLabel.setText(String(playerStats.devs))
-        
+        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
+        self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
+        self.locRateLabel.setText(String(format: "%.1f", CodeServices.calculateDevLocProduction(game: AppShared.game)))
+        self.dolRateLabel.setText(String(format: "%.1f", MarketServices.calculateLocDemand(game: AppShared.game)))
+        self.devAmountLabel.setText(String(format: "%d", playerStats.devs))
+        self.mktLvlLabel.setText(String(format: "%d", playerStats.marketingLevel))
     }
     
 }
