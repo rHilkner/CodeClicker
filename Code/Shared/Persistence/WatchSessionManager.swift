@@ -42,20 +42,6 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     }
     
     private let session: WCSession = WCSession.default
-    /*
-    private var validSession: WCSession? {
-        
-        // paired - the user has to have their device paired to the watch
-        // watchAppInstalled - the user must have your watch app installed
-        
-        // Note: if the device is paired, but your watch app is not installed
-        // consider prompting the user to install it for a better experience
-        
-        if let session = session, session.isPaired && session.isWatchAppInstalled {
-            return session
-        }
-        return nil
-    }*/
     
     func startSession() {
         session.delegate = self
@@ -65,13 +51,11 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     func updateGame(game: Game) throws {
         
         let encodedObject = try? JSONEncoder().encode(game.gameStats)
-        
-        //if let session = validSession {
-            do {
-                try session.updateApplicationContext(["gameStats": String(data: encodedObject!, encoding: .utf8)!])
-            } catch let error {
-                throw error
-            }
-        //}
+    
+        do {
+            try session.updateApplicationContext(["gameStats": String(data: encodedObject!, encoding: .utf8)!])
+        } catch let error {
+            throw error
+        }
     }
 }

@@ -15,7 +15,7 @@ protocol GameDelegate: NSObjectProtocol {
 class Game {
 
     var gameStats: GameData
-    weak var gameDelegate: GameDelegate?
+    var gameDelegate: [GameDelegate] = []
 
     init() {
         self.gameStats = GameData()
@@ -30,15 +30,19 @@ class Game {
         }
     }
 
-    // swiftlint:disable function_body_length
     /// Starts game loop
     func executeGameLoop() {
         DispatchQueue.global().async {
+            let gameLoopFrequency: Double = 5.0
+            let gameLoopPeriod: Double = 1/gameLoopFrequency
+            
             var loopCounter = 0
 
             var lastTime = Date()
             var currentTime = lastTime
             var timeInterval: TimeInterval = currentTime.timeIntervalSince1970 - lastTime.timeIntervalSince1970
+            var executionTimeInterval: TimeInterval = 0
+            var sleepTime: TimeInterval = 0
 
             // Keeping variables that store fractions of LoC and dols remained from each iteration
             var locProduction: Double = 0.0
@@ -85,21 +89,26 @@ class Game {
                     self.gameStats.playerStats.dols += locProfit
 
                     // Updating labels from delegate
-                    self.gameDelegate?.updateStats()
+                    self.gameDelegate.map({ (delegate) in
+                        delegate.updateStats()
+                    })
                     
-                    //try? WatchSessionServerManager.sharedManager.updateGame(game: AppShared.game)
+                    // Saving game
+                    UserDefaultsPersistence.saveGame()
                     
                 }
 
                 lastTime = currentTime
-                loopCounter += 1
-                if loopCounter == 10000 {
-                    UserDefaultsPersistence.saveGame()
-                    loopCounter = 0
+                
+                currentTime = Date()
+                executionTimeInterval = currentTime.timeIntervalSince1970 - lastTime.timeIntervalSince1970
+                sleepTime = gameLoopPeriod - executionTimeInterval
+                // Sleeping beyond execution time to make game loop period happen correctly
+                if sleepTime > 0 {
+                    usleep(UInt32(sleepTime) * 1000000)
                 }
+                
             }
         }
     }
-    // swift_lint:enable function_body_length
-
 }

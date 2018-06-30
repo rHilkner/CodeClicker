@@ -12,8 +12,13 @@ import Foundation
 
 class RightInterfaceController: WKInterfaceController {
 
+    @IBOutlet var locLabel: WKInterfaceLabel!
+    @IBOutlet var dolLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        AppShared.game.gameDelegate.append(self)
         
     }
 
@@ -28,3 +33,16 @@ class RightInterfaceController: WKInterfaceController {
     }
 
 }
+
+extension RightInterfaceController: GameDelegate {
+    
+    func updateStats() {
+        let playerStats = AppShared.game.gameStats.playerStats
+        let marketStats = AppShared.game.gameStats.marketStats
+        
+        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
+        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+    }
+    
+}
+

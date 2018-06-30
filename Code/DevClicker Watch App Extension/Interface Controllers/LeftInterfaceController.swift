@@ -12,19 +12,36 @@ import Foundation
 
 class LeftInterfaceController: WKInterfaceController {
 
+    @IBOutlet var locLabel: WKInterfaceLabel!
+    @IBOutlet var dolLabel: WKInterfaceLabel!
+    @IBOutlet var devAmountLabel: WKInterfaceLabel!
+    @IBOutlet var pcAmountLabel: WKInterfaceLabel!
+    @IBOutlet var devPriceLabel: WKInterfaceLabel!
+    @IBOutlet var pcPriceLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        AppShared.game.gameDelegate.append(self)
+        
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    @IBAction func devUp() {
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    @IBAction func pcUp() {
     }
 
+}
+
+extension LeftInterfaceController: GameDelegate {
+    
+    func updateStats() {
+        let playerStats = AppShared.game.gameStats.playerStats
+        let marketStats = AppShared.game.gameStats.marketStats
+        
+        self.dolLabel.setText(String(format: "%2.1f", playerStats.dols))
+        self.locLabel.setText(String(format: "%2.1f", playerStats.loc))
+    }
+    
 }
