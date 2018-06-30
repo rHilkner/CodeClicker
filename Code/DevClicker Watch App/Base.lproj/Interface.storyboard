@@ -81,7 +81,7 @@
             <objects>
                 <controller id="T3i-tf-bTc" customClass="MiddleInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
-                        <group width="136" height="151" alignment="left" layout="vertical" id="Frf-nO-tyj">
+                        <group width="1" height="0.69999999999999996" alignment="left" layout="vertical" id="Frf-nO-tyj">
                             <items>
                                 <group width="1" alignment="left" id="5fp-ac-kkD">
                                     <items>
@@ -114,6 +114,10 @@
                                         <label alignment="left" text="3789" id="77I-0M-2mq">
                                             <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
                                         </label>
+                                        <label alignment="center" verticalAlignment="center" text="&lt;/&gt;" id="5nv-ID-Gsn">
+                                            <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="22"/>
+                                        </label>
                                         <label alignment="right" text="3789" id="P5K-Mt-LFf">
                                             <fontDescription key="font" type="system" weight="thin" pointSize="14"/>
                                         </label>
@@ -135,11 +139,6 @@
                                         </label>
                                     </items>
                                 </group>
-                                <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="2" steps="10" id="p20-z6-Xd2">
-                                    <connections>
-                                        <action selector="sliderChanged:" destination="T3i-tf-bTc" id="q6E-YN-Nnp"/>
-                                    </connections>
-                                </slider>
                             </items>
                             <gestureRecognizers>
                                 <tapGestureRecognizer id="bVx-MW-IxT">
@@ -148,6 +147,15 @@
                                     </connections>
                                 </tapGestureRecognizer>
                             </gestureRecognizers>
+                        </group>
+                        <group width="1" alignment="left" id="tz6-Br-nfQ">
+                            <items>
+                                <slider width="1" alignment="left" verticalAlignment="bottom" continuous="YES" value="1" maximum="2" steps="10" id="p20-z6-Xd2">
+                                    <connections>
+                                        <action selector="sliderChanged:" destination="T3i-tf-bTc" id="q6E-YN-Nnp"/>
+                                    </connections>
+                                </slider>
+                            </items>
                         </group>
                     </items>
                     <connections>
@@ -185,19 +193,41 @@
                                 </label>
                             </items>
                         </group>
-                        <table alignment="left" id="aWS-oj-6aK">
+                        <table alignment="center" id="aWS-oj-6aK">
                             <items>
-                                <tableRow identifier="upgrade" id="lZf-pW-1Et">
-                                    <group key="rootItem" width="1" alignment="left" layout="vertical" spacing="0.0" id="s2a-ZE-QSi">
+                                <tableRow identifier="upgrades_table" id="lZf-pW-1Et" customClass="UpgradesTableRowController" customModule="DevClicker_Watch_App_Extension">
+                                    <group key="rootItem" width="1" height="64" alignment="left" layout="vertical" id="s2a-ZE-QSi">
                                         <items>
-                                            <label width="116" alignment="left" text="UPGRADE" textAlignment="center" id="teh-H9-fqm">
+                                            <label width="1" height="0.29999999999999999" alignment="center" text="UPGRADE" textAlignment="center" id="teh-H9-fqm">
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                             </label>
-                                            <label alignment="left" text="description" id="FXM-tt-GoG">
-                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="10"/>
+                                            <label width="1" height="0.45000000000000001" alignment="left" text="description" id="FXM-tt-GoG">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="12"/>
                                             </label>
+                                            <group width="1" height="0.25" alignment="left" id="e81-lr-2iF">
+                                                <items>
+                                                    <label height="1" alignment="left" verticalAlignment="center" text="LOC" textAlignment="left" id="zsu-KG-dS1">
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                                    </label>
+                                                    <label height="1" alignment="right" verticalAlignment="center" text="DOL" textAlignment="right" id="QSW-n3-pwv" userLabel="price">
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="4"/>
+                                            </group>
                                         </items>
+                                        <edgeInsets key="margins" left="4" right="4" top="4" bottom="0.0"/>
                                     </group>
+                                    <connections>
+                                        <outlet property="descriptionLabel" destination="FXM-tt-GoG" id="Gun-on-ibz"/>
+                                        <outlet property="dolPriceLabel" destination="QSW-n3-pwv" id="8Kh-JV-E13"/>
+                                        <outlet property="locPriceLabel" destination="zsu-KG-dS1" id="4GR-jr-uPc"/>
+                                        <outlet property="titleLabel" destination="teh-H9-fqm" id="6K1-0Z-b4B"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -205,6 +235,7 @@
                     <connections>
                         <outlet property="dolLabel" destination="q9I-yp-Gcf" id="kVf-rI-APJ"/>
                         <outlet property="locLabel" destination="Whq-xF-ZZu" id="Thl-kp-8iy"/>
+                        <outlet property="upgradesTable" destination="aWS-oj-6aK" id="R7p-WY-M1a"/>
                     </connections>
                 </controller>
             </objects>

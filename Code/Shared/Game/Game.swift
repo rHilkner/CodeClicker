@@ -19,7 +19,6 @@ class Game {
 
     init() {
         self.gameStats = GameData()
-        self.gameStats.playerStats.loc = 12000
     }
 
     init(gameStats: GameData?) {

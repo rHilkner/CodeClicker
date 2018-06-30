@@ -26,6 +26,10 @@ class MiddleInterfaceController: WKInterfaceController {
         
         AppShared.game.gameDelegate.append(self)
     }
+    
+    override func willActivate() {
+        
+    }
 
     @IBAction func codeLocTapped(_ sender: Any) {
         PlayerActionsServices.codeLocTapped()

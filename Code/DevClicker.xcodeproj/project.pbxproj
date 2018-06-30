@@ -19,6 +19,7 @@
 		2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */; };
 		2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* RightInterfaceController.swift */; };
 		22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA320E71D8F0097990D /* WatchUIServices.swift */; };
+		22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA520E724A30097990D /* UpgradesTableRowController.swift */; };
 		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
 		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
@@ -141,6 +142,7 @@
 		2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleInterfaceController.swift; sourceTree = "<group>"; };
 		2200678720E564A600A66BA6 /* RightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightInterfaceController.swift; sourceTree = "<group>"; };
 		22221FA320E71D8F0097990D /* WatchUIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUIServices.swift; sourceTree = "<group>"; };
+		22221FA520E724A30097990D /* UpgradesTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesTableRowController.swift; sourceTree = "<group>"; };
 		2256124920E62FAA00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInterfaceController.swift; sourceTree = "<group>"; };
 		22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevClicker.entitlements; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */,
+				22221FA720E724B60097990D /* Views */,
 				2256124D20E6477300424840 /* Interface Controllers */,
 				2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */,
 				2200677220E48D7000A66BA6 /* NotificationController.swift */,
@@ -250,6 +253,15 @@
 				2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */,
 			);
 			path = "DevClicker Watch App Extension";
+			sourceTree = "<group>";
+		};
+		22221FA720E724B60097990D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22221FA520E724A30097990D /* UpgradesTableRowController.swift */,
+			);
+			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2256121B20E620CE00424840 /* Shared */ = {
@@ -733,6 +745,7 @@
 				2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */,
 				229004A420E6C3CF00C04776 /* MarketInterfaceController.swift in Sources */,
 				22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */,
+				22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */,
 				2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */,
 				22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */,
 				22F41AA320E5DD3F001FCFDA /* ExponentialOperator.swift in Sources */,
