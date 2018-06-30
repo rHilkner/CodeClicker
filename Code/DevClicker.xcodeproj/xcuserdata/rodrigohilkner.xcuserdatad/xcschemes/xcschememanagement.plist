@@ -12,12 +12,12 @@
 		<key>DevClicker Watch App (Notification).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>DevClicker Watch App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>DevClicker.xcscheme</key>
 		<dict>

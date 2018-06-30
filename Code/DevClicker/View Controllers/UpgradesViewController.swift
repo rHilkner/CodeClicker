@@ -18,6 +18,11 @@ class UpgradesViewController: UIViewController {
         self.tableView.delegate = self
         self.refreshTableViewContent()
     }
+
+    @IBAction func goToCodingView() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
 
 extension UpgradesViewController {

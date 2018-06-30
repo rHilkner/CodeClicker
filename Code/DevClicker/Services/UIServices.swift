@@ -12,13 +12,13 @@ class UIServices {
 
     /// Represents the LoC quantity into a string in the format: "D$ XXX.XXX k" or "D$ XXX.XXX M"
     static func locStringFormat(loc: Int) -> String {
-        var locString = "\(loc) LoC"
+        var locString = "\(loc)"
         let locValue = loc
 
         // If value is greater than thousands, then it needs formatting
         if locValue >= 1000 {
             let locValueString = self.valueToString(value: locValue)
-            locString = locValueString + " LoC"
+            locString = locValueString
         }
 
         return locString
