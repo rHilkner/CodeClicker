@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class RightInterfaceController: WKInterfaceController {
+class UpgradesInterfaceController: WKInterfaceController {
 
     @IBOutlet var locLabel: WKInterfaceLabel!
     @IBOutlet var dolLabel: WKInterfaceLabel!
@@ -62,7 +62,7 @@ class RightInterfaceController: WKInterfaceController {
 
 }
 
-extension RightInterfaceController: GameDelegate {
+extension UpgradesInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats

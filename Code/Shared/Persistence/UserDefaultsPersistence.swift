@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreMotion
 
 class UserDefaultsPersistence {
 
@@ -55,6 +56,21 @@ class UserDefaultsPersistence {
         let mktProfit = Double(mktSellings) * MarketServices.calculateLocPrice(game: game)
         game.gameStats.playerStats.loc -= mktSellings
         game.gameStats.playerStats.dols += mktProfit
+        
+        // earn money with CoreMotion updates
+        if #available(iOS 11.0, *) {
+            let pedometer = CMPedometer()
+                if CMPedometer.authorizationStatus() == .authorized {
+                    if CMPedometer.isDistanceAvailable() {
+                        pedometer.queryPedometerData(from: Date(timeIntervalSince1970: lastSaveTime), to: Date(timeIntervalSince1970: currentTime)) { (data, err) in
+                            if let distanceCount = data?.distance {
+                                game.gameStats.playerStats.dols += Double(truncating: distanceCount) * 1000.0
+                            }
+                        }
+                    }
+                }
+            } else {
+        }
 
         print("LocProd: \(Int(devProductivity))\nProfit: \(mktDemand)")
 
