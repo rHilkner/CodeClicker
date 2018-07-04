@@ -51,4 +51,3 @@ extension MarketingInterfaceController: GameDelegate {
     }
     
 }
-

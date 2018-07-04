@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UIServices: UIServicesProtocol {
+struct IosUIServices: UIServicesProtocol {
 
     /// Represents the LoC quantity into a string in the format: "XXX.XXX k" or "XXX.XXX M" or "XXX.XXX B"
     static func locStringFormat(loc: Int) -> String {
@@ -17,7 +17,7 @@ struct UIServices: UIServicesProtocol {
 
         // If value is greater than thousands, then it needs formatting
         if locValue >= 1000 {
-            let locValueString = self.valueToString(value: locValue)
+            let locValueString = self.valueToString(value: locValue, spaced: true)
             locString = locValueString
         }
 
@@ -31,37 +31,11 @@ struct UIServices: UIServicesProtocol {
 
         // If value is greater than thousands, then it needs formatting
         if dolValue >= 1000 {
-            let dolValueString = self.valueToString(value: dolValue)
+            let dolValueString = self.valueToString(value: dolValue, spaced: true)
             dolString = "D$ " + dolValueString
         }
 
         return dolString
-    }
-
-    internal static func valueToString(value: Int) -> String {
-        var num = value
-        var valueString: String = ""
-
-        // Checking billion
-        if num >= (1000)^^3 {
-            let valueRemained = (value%(1000)^^3)/(1000^^2)
-            num /= (1000)^^3
-            valueString = "\(num).\(valueRemained) B"
-
-            // Checking million
-        } else if num >= (1000)^^2 {
-            let valueRemained = (num%(1000)^^2)/1000
-            num /= (1000)^^2
-            valueString = "\(num).\(valueRemained) M"
-
-            // Checking thousand
-        } else if num >= 1000 {
-            let valueRemained = num%1000
-            num /= 1000
-            valueString = "\(num).\(valueRemained) k"
-        }
-
-        return valueString
     }
 
 }

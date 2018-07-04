@@ -25,11 +25,6 @@ class MainInterfaceController: WKInterfaceController {
         AppShared.game.gameDelegate.append(self)
     }
 
-
-    override func willActivate() {
-        
-    }
-
     @IBAction func codeLocTapped(_ sender: Any) {
         PlayerActionsServices.codeLocTapped()
     }
@@ -43,7 +38,7 @@ extension MainInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
-        
+
         self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dol)))
         self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
         self.locRateLabel.setText(String(format: "%.1f", CodeServices.calculateDevLocProduction(game: AppShared.game)))

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khS-Q1-IJl">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
@@ -191,7 +195,7 @@
                         </group>
                         <table alignment="center" id="aWS-oj-6aK">
                             <items>
-                                <tableRow identifier="upgrades_table" id="lZf-pW-1Et" customClass="UpgradesTableRowController" customModule="DevClicker_Watch_App_Extension">
+                                <tableRow identifier="UpgradeRow" id="lZf-pW-1Et" customClass="UpgradesTableRowController" customModule="DevClicker_Watch_App_Extension">
                                     <group key="rootItem" width="1" height="64" alignment="left" layout="vertical" id="s2a-ZE-QSi">
                                         <items>
                                             <label width="1" height="0.29999999999999999" alignment="center" text="UPGRADE" textAlignment="center" id="teh-H9-fqm">

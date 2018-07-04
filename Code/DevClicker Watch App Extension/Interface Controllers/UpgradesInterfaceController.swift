@@ -16,7 +16,7 @@ class UpgradesInterfaceController: WKInterfaceController {
     @IBOutlet var dolLabel: WKInterfaceLabel!
     @IBOutlet var upgradesTable: WKInterfaceTable!
     
-    var availableUpgrades:[Upgrade] = []
+    var availableUpgrades: [Upgrade] = []
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -27,12 +27,12 @@ class UpgradesInterfaceController: WKInterfaceController {
     
     override func willActivate() {
         self.refreshUpgradesTableContent()
-        populateUpgradesTable()
+        self.populateUpgradesTable()
     }
     
     private func populateUpgradesTable() {
-        
-        upgradesTable.setNumberOfRows(availableUpgrades.count, withRowType: "upgrades_table")
+
+        RowControllerFactory.setNumberOfRows(ofType: .upgradeRow, forTable: self.upgradesTable, count: self.availableUpgrades.count)
         
         for index in 0..<availableUpgrades.count {
             if let row = upgradesTable.rowController(at: index) as? UpgradesTableRowController {
@@ -71,4 +71,3 @@ extension UpgradesInterfaceController: GameDelegate {
         self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
     }
 }
-

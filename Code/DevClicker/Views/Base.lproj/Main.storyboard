@@ -217,7 +217,7 @@
                                 <rect key="frame" x="285" y="27" width="80" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="Z0C-fJ-fmC" kind="show" id="sEd-QL-LkD"/>
+                                    <segue destination="Z0C-fJ-fmC" kind="show" animates="NO" id="sEd-QL-LkD"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -17,7 +17,7 @@ class WatchUIServices: UIServicesProtocol {
         
         // If value is greater than thousands, then it needs formatting
         if locValue >= 1000 {
-            let locValueString = self.valueToString(value: locValue)
+            let locValueString = self.valueToString(value: locValue, spaced: false)
             locString = locValueString
         }
         
@@ -31,37 +31,11 @@ class WatchUIServices: UIServicesProtocol {
         
         // If value is greater than thousands, then it needs formatting
         if dolValue >= 1000 {
-            let dolValueString = self.valueToString(value: dolValue)
+            let dolValueString = self.valueToString(value: dolValue, spaced: false)
             dolString = dolValueString
         }
         
         return dolString
-    }
-    
-    internal static func valueToString(value: Int) -> String {
-        var num = value
-        var valueString: String = ""
-        
-        // Checking billion
-        if num >= (1000)^^3 {
-            let valueRemained = (value%(1000)^^3)/(1000^^2)/100
-            num /= (1000)^^3
-            valueString = "\(num).\(valueRemained)B"
-            
-            // Checking million
-        } else if num >= (1000)^^2 {
-            let valueRemained = (num%(1000)^^2)/1000/100
-            num /= (1000)^^2
-            valueString = "\(num).\(valueRemained)M"
-            
-            // Checking thousand
-        } else if num >= 1000 {
-            let valueRemained = num%1000/100
-            num /= 1000
-            valueString = "\(num).\(valueRemained)k"
-        }
-        
-        return valueString
     }
     
 }

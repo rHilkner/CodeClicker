@@ -29,6 +29,7 @@ class Game {
         }
     }
 
+    // swiftlint:disable function_body_length
     /// Starts game loop
     func executeGameLoop() {
         DispatchQueue.global().async {
@@ -85,8 +86,8 @@ class Game {
                     let locProfit = Double(locSold) * sellLocPrice
                     self.gameStats.playerStats.dol += locProfit
 
-                    // Updating labels from delegate
-                    self.gameDelegate.map({ (delegate) in
+                    // Updating labels from delegates
+                    _ = self.gameDelegate.map({ (delegate) in
                         delegate.updateStats()
                     })
                     
@@ -108,4 +109,5 @@ class Game {
             }
         }
     }
+    // swiftlint:enable function_body_length
 }

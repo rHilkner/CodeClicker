@@ -74,8 +74,8 @@ extension CodingViewController: GameDelegate {
         // Setting correct data to labels
         let playerStats = AppShared.game.gameStats.playerStats
 
-        self.dolLabel.text = UIServices.dolStringFormat(dol: playerStats.dol)
-        self.locLabel.text = UIServices.locStringFormat(loc: playerStats.loc)
+        self.dolLabel.text = IosUIServices.dolStringFormat(dol: playerStats.dol)
+        self.locLabel.text = IosUIServices.locStringFormat(loc: playerStats.loc)
         self.pcCountLabel.text = "\(playerStats.pcs)"
         self.numDevsLabel.text = "\(playerStats.devs)"
         self.locPerSecLabel.text = String(format: "%.2f", CodeServices.calculateDevLocProduction(game: AppShared.game))
