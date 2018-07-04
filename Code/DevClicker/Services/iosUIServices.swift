@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UIServices {
+struct UIServices: UIServicesProtocol {
 
     /// Represents the LoC quantity into a string in the format: "XXX.XXX k" or "XXX.XXX M" or "XXX.XXX B"
     static func locStringFormat(loc: Int) -> String {
@@ -38,7 +38,7 @@ class UIServices {
         return dolString
     }
 
-    private static func valueToString(value: Int) -> String {
+    internal static func valueToString(value: Int) -> String {
         var num = value
         var valueString: String = ""
 

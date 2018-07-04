@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WatchUIServices {
+class WatchUIServices: UIServicesProtocol {
     
     /// Represents the LoC quantity into a string in the format: "D$ XXX.Xk" or "D$ XXX.XM"
     static func locStringFormat(loc: Int) -> String {
@@ -24,7 +24,7 @@ class WatchUIServices {
         return locString
     }
     
-    /// Represents the LoC quantity into a string in the format: "D$ XXX.XXX k" or "D$ XXX.XXX M"
+    /// Represents the LoC quantity into a string in the format: "D$ XXX.X k" or "D$ XXX.X M"
     static func dolStringFormat(dol: Double) -> String {
         var dolString = String(format: "%.1f", dol)
         let dolValue = Int(dol)
@@ -38,7 +38,7 @@ class WatchUIServices {
         return dolString
     }
     
-    private static func valueToString(value: Int) -> String {
+    internal static func valueToString(value: Int) -> String {
         var num = value
         var valueString: String = ""
         

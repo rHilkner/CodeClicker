@@ -14,15 +14,33 @@ precedencegroup ExponentiativePrecedence {
 }
 
 infix operator ^^: ExponentiativePrecedence
-func ^^ (radix: Int, power: Int) -> Int {
-    return Int(pow(Double(radix), Double(power)))
+func ^^ (radix: DoubleConvertible, power: DoubleConvertible) -> Int {
+    return Int(pow(radix.toDouble(), power.toDouble()))
 }
-func ^^ (radix: Int, power: Double) -> Double {
-    return pow(Double(radix), power)
+
+infix operator *: MultiplicationPrecedence
+func * (lhs: DoubleConvertible, rhs: DoubleConvertible) -> Double {
+    return Double(lhs.toDouble() * rhs.toDouble())
 }
-func ^^ (radix: Double, power: Int) -> Double {
-    return pow(radix, Double(power))
+
+protocol DoubleConvertible {
+    func toDouble() -> Double
 }
-func ^^ (radix: Double, power: Double) -> Double {
-    return pow(radix, power)
+
+extension Int: DoubleConvertible {
+    func toDouble() -> Double {
+        return Double(self)
+    }
+}
+
+extension Float: DoubleConvertible {
+    func toDouble() -> Double {
+        return Double(self)
+    }
+}
+
+extension Double: DoubleConvertible {
+    func toDouble() -> Double {
+        return self
+    }
 }
