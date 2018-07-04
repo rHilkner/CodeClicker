@@ -10,11 +10,10 @@
 		2200676120E48D6F00A66BA6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2200675F20E48D6F00A66BA6 /* Interface.storyboard */; };
 		2200676320E48D7000A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200676220E48D7000A66BA6 /* Assets.xcassets */; };
 		2200676A20E48D7000A66BA6 /* DevClicker Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2200676F20E48D7000A66BA6 /* CodeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */; };
 		2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */; };
 		2200677720E48D7100A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200677620E48D7100A66BA6 /* Assets.xcassets */; };
 		2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */; };
-		2200678620E4959300A66BA6 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MainInterfaceController.swift */; };
+		2200678620E4959300A66BA6 /* CodingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* CodingInterfaceController.swift */; };
 		2200678820E564A600A66BA6 /* UpgradesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */; };
 		22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA320E71D8F0097990D /* WatchUIServices.swift */; };
 		22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA520E724A30097990D /* UpgradesTableRowController.swift */; };
@@ -26,7 +25,6 @@
 		229004A420E6C3CF00C04776 /* MarketingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229004A320E6C3CF00C04776 /* MarketingInterfaceController.swift */; };
 		229004A520E6C92900C04776 /* IosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* IosUIServices.swift */; };
 		22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
-		22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
 		22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
 		22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
 		22F41AA120E5DD36001FCFDA /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65D5F6A20E0AA0C00E69339 /* MarketData.swift */; };
@@ -52,6 +50,11 @@
 		C60E8C8520ED263B00433868 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
 		C60E8C8A20ED328700433868 /* RowControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E8C8920ED328700433868 /* RowControllerFactory.swift */; };
 		C60E8C8C20ED38E100433868 /* IosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* IosUIServices.swift */; };
+		C60E8C8D20ED3BA200433868 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
+		C60E8C9020ED3D2B00433868 /* CoreMotionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E8C8F20ED3D2B00433868 /* CoreMotionServices.swift */; };
+		C60E8C9120ED3E4600433868 /* CoreMotionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E8C8F20ED3D2B00433868 /* CoreMotionServices.swift */; };
+		C60E8C9320ED403700433868 /* FirebasePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E8C9220ED403700433868 /* FirebasePersistence.swift */; };
+		C60E8C9420ED451E00433868 /* InfrastructureInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200676E20E48D7000A66BA6 /* InfrastructureInterfaceController.swift */; };
 		C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CB920E1B4BC007CB091 /* CodeServices.swift */; };
 		C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
 		C61B4CBF20E2851E007CB091 /* UpgradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */; };
@@ -135,11 +138,11 @@
 		2200676220E48D7000A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2200676420E48D7000A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DevClicker Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInterfaceController.swift; sourceTree = "<group>"; };
+		2200676E20E48D7000A66BA6 /* InfrastructureInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureInterfaceController.swift; sourceTree = "<group>"; };
 		2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		2200677620E48D7100A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2200677820E48D7100A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2200678520E4959300A66BA6 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
+		2200678520E4959300A66BA6 /* CodingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingInterfaceController.swift; sourceTree = "<group>"; };
 		2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesInterfaceController.swift; sourceTree = "<group>"; };
 		22221FA320E71D8F0097990D /* WatchUIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUIServices.swift; sourceTree = "<group>"; };
 		22221FA520E724A30097990D /* UpgradesTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesTableRowController.swift; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 		C60E384A20E0A3E90091B073 /* StoryboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
 		C60E384C20E0A4770091B073 /* SegueIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIds.swift; sourceTree = "<group>"; };
 		C60E8C8920ED328700433868 /* RowControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowControllerFactory.swift; sourceTree = "<group>"; };
+		C60E8C8F20ED3D2B00433868 /* CoreMotionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionServices.swift; sourceTree = "<group>"; };
+		C60E8C9220ED403700433868 /* FirebasePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePersistence.swift; sourceTree = "<group>"; };
 		C61B4CB920E1B4BC007CB091 /* CodeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeServices.swift; sourceTree = "<group>"; };
 		C61B4CBB20E1B548007CB091 /* ProductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionData.swift; sourceTree = "<group>"; };
 		C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesViewController.swift; sourceTree = "<group>"; };
@@ -245,9 +250,9 @@
 		2200676D20E48D7000A66BA6 /* DevClicker Watch App Extension */ = {
 			isa = PBXGroup;
 			children = (
-				22221FA320E71D8F0097990D /* WatchUIServices.swift */,
 				C60E8C8820ED280900433868 /* App Media */,
 				C60E8C8720ED274600433868 /* App Support */,
+				C60E8C8E20ED3D1200433868 /* Services */,
 				22221FA720E724B60097990D /* Row Controllers */,
 				2256124D20E6477300424840 /* Interface Controllers */,
 			);
@@ -278,8 +283,8 @@
 		2256124D20E6477300424840 /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */,
-				2200678520E4959300A66BA6 /* MainInterfaceController.swift */,
+				2200676E20E48D7000A66BA6 /* InfrastructureInterfaceController.swift */,
+				2200678520E4959300A66BA6 /* CodingInterfaceController.swift */,
 				2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */,
 				229004A320E6C3CF00C04776 /* MarketingInterfaceController.swift */,
 			);
@@ -310,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				C60E384120E046590091B073 /* Game.swift */,
+				C61B4CC420E293D2007CB091 /* GameData.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -341,6 +347,15 @@
 				2200677620E48D7100A66BA6 /* Assets.xcassets */,
 			);
 			path = "App Media";
+			sourceTree = "<group>";
+		};
+		C60E8C8E20ED3D1200433868 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				22221FA320E71D8F0097990D /* WatchUIServices.swift */,
+				C60E8C8F20ED3D2B00433868 /* CoreMotionServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C61B4CCB20E2C12F007CB091 /* Cells */ = {
@@ -437,6 +452,7 @@
 				2256124920E62FAA00424840 /* WatchSessionManager.swift */,
 				C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */,
 				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
+				C60E8C9220ED403700433868 /* FirebasePersistence.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -452,7 +468,6 @@
 		C6640E7E20DF567100EAB7EE /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				C61B4CC420E293D2007CB091 /* GameData.swift */,
 				C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */,
 				C61B4CBB20E1B548007CB091 /* ProductionData.swift */,
 				C65D5F6A20E0AA0C00E69339 /* MarketData.swift */,
@@ -744,8 +759,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E8C9420ED451E00433868 /* InfrastructureInterfaceController.swift in Sources */,
 				C60E8C8420ED203600433868 /* PersistenceServices.swift in Sources */,
-				2200678620E4959300A66BA6 /* MainInterfaceController.swift in Sources */,
+				2200678620E4959300A66BA6 /* CodingInterfaceController.swift in Sources */,
 				22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */,
 				2200678820E564A600A66BA6 /* UpgradesInterfaceController.swift in Sources */,
 				22F41AA120E5DD36001FCFDA /* MarketData.swift in Sources */,
@@ -756,7 +772,9 @@
 				C60E8C8520ED263B00433868 /* AppShared.swift in Sources */,
 				22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */,
 				22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */,
+				C60E8C9320ED403700433868 /* FirebasePersistence.swift in Sources */,
 				229004A520E6C92900C04776 /* IosUIServices.swift in Sources */,
+				C60E8C8D20ED3BA200433868 /* GameData.swift in Sources */,
 				2256124C20E638E400424840 /* Game.swift in Sources */,
 				22F41AA220E5DD38001FCFDA /* Upgrade.swift in Sources */,
 				2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */,
@@ -765,9 +783,8 @@
 				229004A420E6C3CF00C04776 /* MarketingInterfaceController.swift in Sources */,
 				22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */,
 				2248014F20ED29AC00430B8D /* UIServicesProtocol.swift in Sources */,
+				C60E8C9020ED3D2B00433868 /* CoreMotionServices.swift in Sources */,
 				22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */,
-				2200676F20E48D7000A66BA6 /* CodeInterfaceController.swift in Sources */,
-				22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */,
 				22F41AA320E5DD3F001FCFDA /* ExponentialOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +813,7 @@
 				C60E383C20E02DD90091B073 /* MarketServices.swift in Sources */,
 				C65D5F7120E0C1BB00E69339 /* Notes.swift in Sources */,
 				C60E384D20E0A4770091B073 /* SegueIds.swift in Sources */,
+				C60E8C9120ED3E4600433868 /* CoreMotionServices.swift in Sources */,
 				22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */,
 				C60E383A20E02DCD0091B073 /* PlayerActionsServices.swift in Sources */,
 				2248014E20ED29A600430B8D /* UIServicesProtocol.swift in Sources */,

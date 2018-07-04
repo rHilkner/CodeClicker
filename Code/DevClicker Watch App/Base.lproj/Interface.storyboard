@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khS-Q1-IJl">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
-        <!--Code Interface Controller-->
+        <!--Infrastructure Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="CodeInterfaceController" customModule="DevClicker_Watch_App_Extension">
+                <controller id="AgC-eL-Hgc" customClass="InfrastructureInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
                         <group width="1" alignment="left" id="7cu-6p-A9e">
                             <items>
@@ -76,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="-146" y="337"/>
         </scene>
-        <!--Main Interface Controller-->
+        <!--Coding Interface Controller-->
         <scene sceneID="YWW-TQ-xK6">
             <objects>
-                <controller id="T3i-tf-bTc" customClass="MainInterfaceController" customModule="DevClicker_Watch_App_Extension">
+                <controller id="T3i-tf-bTc" customClass="CodingInterfaceController" customModule="DevClicker_Watch_App_Extension">
                     <items>
                         <group width="1" height="0.69999999999999996" alignment="left" layout="vertical" id="Frf-nO-tyj">
                             <items>

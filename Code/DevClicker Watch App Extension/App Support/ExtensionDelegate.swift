@@ -11,10 +11,9 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        
         WatchSessionManager.sharedManager.startSession()
         
-        AppShared.game = UserDefaultsPersistence.loadGame()
+        AppShared.game = PersistenceServices.loadGame()
         AppShared.game.executeGameLoop()
     }
 
@@ -22,7 +21,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
     
     func applicationWillResignActive() {
-        UserDefaultsPersistence.saveGame()
+        PersistenceServices.saveGame()
     }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {

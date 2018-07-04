@@ -92,7 +92,7 @@ class Game {
                     })
                     
                     // Saving game
-                    UserDefaultsPersistence.saveGame()
+                    PersistenceServices.saveGame()
                     
                 }
 

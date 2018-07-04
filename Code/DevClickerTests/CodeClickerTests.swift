@@ -24,42 +24,42 @@ class DevClickerStringsTests: XCTestCase {
     }
 
     func testLocString() {
-        let millionLocString = UIServices.locStringFormat(loc: 123)
-        XCTAssertEqual(millionLocString, "123 LoC")
+        let millionLocString = IosUIServices.locStringFormat(loc: 123)
+        XCTAssertEqual(millionLocString, "123")
     }
 
     func testThousandLocString() {
-        let millionLocString = UIServices.locStringFormat(loc: 12345)
-        XCTAssertEqual(millionLocString, "12.345 k LoC")
+        let millionLocString = IosUIServices.locStringFormat(loc: 12345)
+        XCTAssertEqual(millionLocString, "12.345 k")
     }
 
     func testMillionLocString() {
-        let millionLocString = UIServices.locStringFormat(loc: 3245671)
-        XCTAssertEqual(millionLocString, "3.245 M LoC")
+        let millionLocString = IosUIServices.locStringFormat(loc: 3245671)
+        XCTAssertEqual(millionLocString, "3.245 M")
     }
 
     func testBillionLocString() {
-        let millionLocString = UIServices.locStringFormat(loc: 1234245671)
-        XCTAssertEqual(millionLocString, "1.234 B LoC")
+        let millionLocString = IosUIServices.locStringFormat(loc: 1234245671)
+        XCTAssertEqual(millionLocString, "1.234 B")
     }
 
     func testDolString() {
-        let millionDolString = UIServices.dolStringFormat(dol: 123.00)
+        let millionDolString = IosUIServices.dolStringFormat(dol: 123.00)
         XCTAssertEqual(millionDolString, "D$ 123.00")
     }
 
     func testThousandDolString() {
-        let millionDolString = UIServices.dolStringFormat(dol: 12345.00)
+        let millionDolString = IosUIServices.dolStringFormat(dol: 12345.00)
         XCTAssertEqual(millionDolString, "D$ 12.345 k")
     }
 
     func testMillionDolString() {
-        let millionDolString = UIServices.dolStringFormat(dol: 3245671.00)
+        let millionDolString = IosUIServices.dolStringFormat(dol: 3245671.00)
         XCTAssertEqual(millionDolString, "D$ 3.245 M")
     }
 
     func testBillionDolString() {
-        let billionDolString = UIServices.dolStringFormat(dol: 1234245671.00)
+        let billionDolString = IosUIServices.dolStringFormat(dol: 1234245671.00)
         XCTAssertEqual(billionDolString, "D$ 1.234 B")
     }
     

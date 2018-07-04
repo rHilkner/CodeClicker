@@ -36,7 +36,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
             if let jsonData = jsonString.data(using: .utf8) {
                 if let gameStats = try? JSONDecoder().decode(GameData.self, from: jsonData) {
                     AppShared.game.gameStats = gameStats
-                    UserDefaultsPersistence.saveGame()
+                    PersistenceServices.saveGame()
                 }
             }
         }

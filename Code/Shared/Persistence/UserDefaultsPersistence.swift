@@ -10,8 +10,10 @@ import Foundation
 
 class UserDefaultsPersistence {
 
+    /// Reference to the shared User Defaults object
     private static let defaults = UserDefaults.standard
-    
+
+    /// Saves game to database
     static func saveGame() {
         let game = AppShared.game
         game.gameStats.lastSaveTimeInterval = Date().timeIntervalSince1970
@@ -21,9 +23,10 @@ class UserDefaultsPersistence {
         }
     
         print("-> INFO: Saving user data to User Defaults")
-        defaults.set(encodedPlayerStats, forKey: "gameStats")
+        self.defaults.set(encodedPlayerStats, forKey: "gameStats")
     }
-    
+
+    /// Loads game data from User Defaults and retrivies currente game stats
     static func loadGame() -> Game {
         
         // Parsing player stats from data
@@ -55,12 +58,16 @@ class UserDefaultsPersistence {
         let mktProfit = Double(mktSellings) * MarketServices.calculateLocPrice(game: game)
         game.gameStats.playerStats.loc -= mktSellings
         game.gameStats.playerStats.dol += mktProfit
+        
+        // Earn money with CoreMotion updates (only for iOS 11.0+ and watchOS)
+//        CoreMotionServices.initializeCoreMotion(game: game)
 
-        print("LocProd: \(Int(devProductivity))\nProfit: \(mktDemand)")
+        print("INFO: Game data loaded.")
 
         return game
     }
 
+    /// Retrieves upgrades list from local JSON
     static func fetchUpgradesList() -> [Upgrade] {
 
         guard let upgradesUrl = Bundle.main.url(forResource: "upgrades", withExtension: "json"),

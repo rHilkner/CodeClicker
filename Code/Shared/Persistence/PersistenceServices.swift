@@ -21,5 +21,11 @@ class PersistenceServices {
         // Saving game to user defaults
         UserDefaultsPersistence.saveGame()
     }
+
+    /// Loads the current game from database
+    static func loadGame() -> Game {
+        // Loading game from user defaults
+        return UserDefaultsPersistence.loadGame()
+    }
     
 }

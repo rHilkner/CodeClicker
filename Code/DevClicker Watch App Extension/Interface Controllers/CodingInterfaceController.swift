@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-class MainInterfaceController: WKInterfaceController {
+class CodingInterfaceController: WKInterfaceController {
     
     @IBOutlet var locLabel: WKInterfaceLabel!
     @IBOutlet var dolLabel: WKInterfaceLabel!
@@ -21,8 +21,14 @@ class MainInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         self.becomeCurrentPage()
+        
         AppShared.game.gameDelegate.append(self)
+    }
+    
+    override func willActivate() {
+        
     }
 
     @IBAction func codeLocTapped(_ sender: Any) {
@@ -34,11 +40,11 @@ class MainInterfaceController: WKInterfaceController {
     }
 }
 
-extension MainInterfaceController: GameDelegate {
+extension CodingInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
-
+        
         self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dol)))
         self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
         self.locRateLabel.setText(String(format: "%.1f", CodeServices.calculateDevLocProduction(game: AppShared.game)))
