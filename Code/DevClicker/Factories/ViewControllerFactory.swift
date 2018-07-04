@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Enum containing view controller identifiers
 public enum ViewControllerType: String {
     case codingViewController = "CodingViewController"
     case upgradesViewController = "UpgradesViewController"
@@ -16,6 +17,7 @@ public enum ViewControllerType: String {
 
 class ViewControllerFactory {
 
+    /// Instantiates a view controller from given type
     static func instantiateViewController(ofType type: ViewControllerType) -> UIViewController {
         let storyboard = StoryboardFactory.instantiateStoryboard(type: StoryboardType.main)
         let viewController: UIViewController

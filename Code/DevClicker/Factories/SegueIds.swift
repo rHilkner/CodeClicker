@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
+/// Enum containing segues identifiers
 public enum SegueIds: String {
-
     case firstSegue = "FirstSegue"
-
 }

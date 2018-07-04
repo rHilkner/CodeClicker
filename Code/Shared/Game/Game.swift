@@ -83,7 +83,7 @@ class Game {
                     let sellLocPrice = self.gameStats.marketStats.sellLocBasePrice *
                                         self.gameStats.marketStats.sellLocPriceMultiplier
                     let locProfit = Double(locSold) * sellLocPrice
-                    self.gameStats.playerStats.dols += locProfit
+                    self.gameStats.playerStats.dol += locProfit
 
                     // Updating labels from delegate
                     self.gameDelegate.map({ (delegate) in

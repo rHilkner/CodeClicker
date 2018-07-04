@@ -9,6 +9,7 @@
 import Foundation
 
 struct ProductionData: Codable {
+    // tapValue = tapBase * tapMultiplier
     let tapBase: Double = 1.0
     var tapMultiplier: Double = 1.0
 

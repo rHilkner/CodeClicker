@@ -15,7 +15,7 @@ class MarketServices {
     static func calculateLocDemand(game: Game) -> Double {
         let playerStats = game.gameStats.playerStats
         let marketStats = game.gameStats.marketStats
-        let locDemand = marketStats.baseMarketAtractiveness * marketStats.marketMultiplier *
+        let locDemand = marketStats.baseMktAtractiveness * marketStats.marketMultiplier *
                         (playerStats.coffeeMktRate) * 2.0 ^^ playerStats.marketingLevel
         return locDemand
     }
@@ -27,6 +27,7 @@ class MarketServices {
         return sellPrice
     }
 
+    /// Updates dev price for current number of devs
     static func updateDevPrice() {
         let playerStats = AppShared.game.gameStats.playerStats
         var marketStats = AppShared.game.gameStats.marketStats
@@ -37,6 +38,7 @@ class MarketServices {
         AppShared.game.gameStats.marketStats = marketStats
     }
 
+    /// Updates pc price for current number of pcs
     static func updatePcPrice() {
         let playerStats = AppShared.game.gameStats.playerStats
         var marketStats = AppShared.game.gameStats.marketStats
@@ -47,6 +49,7 @@ class MarketServices {
         AppShared.game.gameStats.marketStats = marketStats
     }
 
+    /// Updates marketing upgrade price for current marketing level
     static func updateMktPrice() {
         let playerStats = AppShared.game.gameStats.playerStats
         var marketStats = AppShared.game.gameStats.marketStats

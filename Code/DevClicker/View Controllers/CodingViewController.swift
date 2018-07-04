@@ -74,7 +74,7 @@ extension CodingViewController: GameDelegate {
         // Setting correct data to labels
         let playerStats = AppShared.game.gameStats.playerStats
 
-        self.dolLabel.text = UIServices.dolStringFormat(dol: playerStats.dols)
+        self.dolLabel.text = UIServices.dolStringFormat(dol: playerStats.dol)
         self.locLabel.text = UIServices.locStringFormat(loc: playerStats.loc)
         self.pcCountLabel.text = "\(playerStats.pcs)"
         self.numDevsLabel.text = "\(playerStats.devs)"

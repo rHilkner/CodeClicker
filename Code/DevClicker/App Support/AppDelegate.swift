@@ -55,4 +55,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-// swiftlint:enable line_length

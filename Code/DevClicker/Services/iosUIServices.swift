@@ -10,7 +10,7 @@ import Foundation
 
 class UIServices {
 
-    /// Represents the LoC quantity into a string in the format: "D$ XXX.XXX k" or "D$ XXX.XXX M"
+    /// Represents the LoC quantity into a string in the format: "XXX.XXX k" or "XXX.XXX M" or "XXX.XXX B"
     static func locStringFormat(loc: Int) -> String {
         var locString = "\(loc)"
         let locValue = loc

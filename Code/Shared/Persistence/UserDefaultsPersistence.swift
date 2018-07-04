@@ -54,7 +54,7 @@ class UserDefaultsPersistence {
         let mktSellings = min(game.gameStats.playerStats.loc, mktDemand)
         let mktProfit = Double(mktSellings) * MarketServices.calculateLocPrice(game: game)
         game.gameStats.playerStats.loc -= mktSellings
-        game.gameStats.playerStats.dols += mktProfit
+        game.gameStats.playerStats.dol += mktProfit
 
         print("LocProd: \(Int(devProductivity))\nProfit: \(mktDemand)")
 

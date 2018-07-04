@@ -19,17 +19,15 @@ class UpgradesViewController: UIViewController {
         self.refreshTableViewContent()
     }
 
-    @IBAction func goToCodingView() {
-        self.dismiss(animated: true, completion: nil)
-    }
-
-}
-
-extension UpgradesViewController {
-
+    /// Refreshes table view with current game stats
     func refreshTableViewContent() {
         self.upgradesAvailable = AppShared.game.gameStats.upgradesAvailable
         self.tableView.reloadData()
+    }
+
+    @IBAction func goToCodingView() {
+        // TODO: set animation correctly
+        self.dismiss(animated: false, completion: nil)
     }
 
 }
@@ -57,11 +55,12 @@ extension UpgradesViewController: UITableViewDataSource {
 // MARK: - Table view delegate
 extension UpgradesViewController: UITableViewDelegate {
 
-    /// Performs actions when a table view cell is selected
+    /// Buys an upgrade when a table view cell (upgrade) is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let upgradeSelected = self.upgradesAvailable[indexPath.row]
-        if !UpgradeServices.buy(upgrade: upgradeSelected) {
+        guard UpgradeServices.buy(upgrade: upgradeSelected) else {
             print("-> INFO: Couldn't buy the selected upgrade.")
+            return
         }
         self.refreshTableViewContent()
     }

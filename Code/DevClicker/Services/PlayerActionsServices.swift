@@ -10,6 +10,7 @@ import Foundation
 
 class PlayerActionsServices {
 
+    /// Performs standard action for when the user taps "Code LoC" button
     static func codeLocTapped() {
         let productionStats = AppShared.game.gameStats.productionStats
         let tapBase = productionStats.tapBase
@@ -17,54 +18,52 @@ class PlayerActionsServices {
 
         let locProduced = Int(tapBase * tapMultiplier)
         AppShared.game.gameStats.playerStats.loc += locProduced
-        self.sendDataToWatch()
+        PersistenceServices.sendDataToWatch()
     }
 
+    /// Performs standard action for when the user taps "Hire dev" button
     static func hireDevTapped() {
         var playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
 
-        if playerStats.dols >= marketStats.devsPrice && playerStats.devs < playerStats.pcs {
-            playerStats.dols -= marketStats.devsPrice
+        if playerStats.dol >= marketStats.devsPrice && playerStats.devs < playerStats.pcs {
+            playerStats.dol -= marketStats.devsPrice
             playerStats.devs += 1
         }
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updateDevPrice()
-        self.sendDataToWatch()
+        PersistenceServices.sendDataToWatch()
     }
 
+    /// Performs standard action for when the user taps "Upgrade Marketing Level" button
     static func upgradeMarketingTapped() {
         var playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
 
-        if playerStats.dols >= marketStats.upgradeMktPrice {
-            playerStats.dols -= marketStats.upgradeMktPrice
+        if playerStats.dol >= marketStats.upgradeMktPrice {
+            playerStats.dol -= marketStats.upgradeMktPrice
             playerStats.marketingLevel += 1
         }
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updateMktPrice()
-        self.sendDataToWatch()
+        PersistenceServices.sendDataToWatch()
     }
 
+    /// Performs standard action for when the user taps "Buy PC" button
     static func addPcTapped() {
         var playerStats = AppShared.game.gameStats.playerStats
         let marketStats = AppShared.game.gameStats.marketStats
 
-        if playerStats.dols >= marketStats.pcPrice {
-            playerStats.dols -= marketStats.pcPrice
+        if playerStats.dol >= marketStats.pcPrice {
+            playerStats.dol -= marketStats.pcPrice
             playerStats.pcs += 1
         }
 
         AppShared.game.gameStats.playerStats = playerStats
         MarketServices.updatePcPrice()
-        self.sendDataToWatch()
-    }
-    
-    static func sendDataToWatch() {
-        UserDefaultsPersistence.saveGame()
-        try? WatchSessionManager.sharedManager.updateGame(game: AppShared.game)
+        PersistenceServices.sendDataToWatch()
     }
 
 }

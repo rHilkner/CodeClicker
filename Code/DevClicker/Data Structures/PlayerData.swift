@@ -10,7 +10,7 @@ import Foundation
 
 /// PlayerData variables are measure units that the player activelly produced
 struct PlayerData: Codable {
-    var dols: Double = 0
+    var dol: Double = 0
     var loc: Int = 0
     var pcs: Int = 0
     var devs: Int = 0

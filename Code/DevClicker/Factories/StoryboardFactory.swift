@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
+/// Enum containing storyboard identifiers
 public enum StoryboardType: String {
-
     case main = "Main"
-
 }
 
 class StoryboardFactory {
 
+    /// Instantiates a storyboard from given type
     static func instantiateStoryboard(type: StoryboardType) -> UIStoryboard {
         switch type {
 

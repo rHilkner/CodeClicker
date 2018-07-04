@@ -10,23 +10,20 @@
 		2200676120E48D6F00A66BA6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2200675F20E48D6F00A66BA6 /* Interface.storyboard */; };
 		2200676320E48D7000A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200676220E48D7000A66BA6 /* Assets.xcassets */; };
 		2200676A20E48D7000A66BA6 /* DevClicker Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */; };
+		2200676F20E48D7000A66BA6 /* CodeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */; };
 		2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */; };
-		2200677320E48D7000A66BA6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677220E48D7000A66BA6 /* NotificationController.swift */; };
-		2200677520E48D7000A66BA6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200677420E48D7000A66BA6 /* ComplicationController.swift */; };
 		2200677720E48D7100A66BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200677620E48D7100A66BA6 /* Assets.xcassets */; };
 		2200677C20E48D7100A66BA6 /* DevClicker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2200675D20E48D6F00A66BA6 /* DevClicker Watch App.app */; };
-		2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */; };
-		2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* RightInterfaceController.swift */; };
+		2200678620E4959300A66BA6 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678520E4959300A66BA6 /* MainInterfaceController.swift */; };
+		2200678820E564A600A66BA6 /* UpgradesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */; };
 		22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA320E71D8F0097990D /* WatchUIServices.swift */; };
 		22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA520E724A30097990D /* UpgradesTableRowController.swift */; };
 		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
 		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
-		229004A420E6C3CF00C04776 /* MarketInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */; };
-		229004A520E6C92900C04776 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* UIServices.swift */; };
+		229004A420E6C3CF00C04776 /* MarketingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229004A320E6C3CF00C04776 /* MarketingInterfaceController.swift */; };
+		229004A520E6C92900C04776 /* iosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* iosUIServices.swift */; };
 		22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
-		22F41A9C20E5CFA4001FCFDA /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
 		22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CC420E293D2007CB091 /* GameData.swift */; };
 		22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
 		22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
@@ -49,6 +46,8 @@
 		C60E384920E0A34D0091B073 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384820E0A34D0091B073 /* ViewControllerFactory.swift */; };
 		C60E384B20E0A3E90091B073 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384A20E0A3E90091B073 /* StoryboardFactory.swift */; };
 		C60E384D20E0A4770091B073 /* SegueIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384C20E0A4770091B073 /* SegueIds.swift */; };
+		C60E8C8420ED203600433868 /* PersistenceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */; };
+		C60E8C8520ED263B00433868 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
 		C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CB920E1B4BC007CB091 /* CodeServices.swift */; };
 		C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
 		C61B4CBF20E2851E007CB091 /* UpgradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */; };
@@ -65,7 +64,7 @@
 		C6640E6D20DF204E00EAB7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6640E6B20DF204E00EAB7EE /* Main.storyboard */; };
 		C6640E7220DF204F00EAB7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6640E7020DF204F00EAB7EE /* LaunchScreen.storyboard */; };
 		C6640E8020DF56CF00EAB7EE /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */; };
-		C6A78B6E20E69F740034F7D6 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* UIServices.swift */; };
+		C6A78B6E20E69F740034F7D6 /* iosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* iosUIServices.swift */; };
 		C6A78B7620E6A4AD0034F7D6 /* CodeClickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B7520E6A4AD0034F7D6 /* CodeClickerTests.swift */; };
 		C6A78B7F20E711BF0034F7D6 /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6A78B7D20E711B00034F7D6 /* coders_crux.ttf */; };
 		C6A78B8020E711C50034F7D6 /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6A78B7D20E711B00034F7D6 /* coders_crux.ttf */; };
@@ -74,6 +73,7 @@
 		C6A78B8320E711CD0034F7D6 /* nokiafc22.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6A78B7E20E711B10034F7D6 /* nokiafc22.ttf */; };
 		C6A78B8420E711CE0034F7D6 /* nokiafc22.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6A78B7E20E711B10034F7D6 /* nokiafc22.ttf */; };
 		C6A78B8620E719BF0034F7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A78B8520E719BF0034F7D6 /* Assets.xcassets */; };
+		C6E1F0EB20ED1E2900CE5FD8 /* PersistenceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,19 +132,16 @@
 		2200676220E48D7000A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2200676420E48D7000A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2200676920E48D7000A66BA6 /* DevClicker Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DevClicker Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftInterfaceController.swift; sourceTree = "<group>"; };
+		2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInterfaceController.swift; sourceTree = "<group>"; };
 		2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		2200677220E48D7000A66BA6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		2200677420E48D7000A66BA6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		2200677620E48D7100A66BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2200677820E48D7100A66BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleInterfaceController.swift; sourceTree = "<group>"; };
-		2200678720E564A600A66BA6 /* RightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightInterfaceController.swift; sourceTree = "<group>"; };
+		2200678520E4959300A66BA6 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
+		2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesInterfaceController.swift; sourceTree = "<group>"; };
 		22221FA320E71D8F0097990D /* WatchUIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUIServices.swift; sourceTree = "<group>"; };
 		22221FA520E724A30097990D /* UpgradesTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradesTableRowController.swift; sourceTree = "<group>"; };
 		2256124920E62FAA00424840 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInterfaceController.swift; sourceTree = "<group>"; };
+		229004A320E6C3CF00C04776 /* MarketingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingInterfaceController.swift; sourceTree = "<group>"; };
 		22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevClicker.entitlements; sourceTree = "<group>"; };
 		22F41AAB20E5FAD0001FCFDA /* DevClicker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App.entitlements"; sourceTree = "<group>"; };
 		22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DevClicker Watch App Extension.entitlements"; sourceTree = "<group>"; };
@@ -177,13 +174,14 @@
 		C6640E7120DF204F00EAB7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6640E7320DF204F00EAB7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6640E7F20DF56CF00EAB7EE /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
-		C6A78B6D20E69F740034F7D6 /* UIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
+		C6A78B6D20E69F740034F7D6 /* iosUIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUIServices.swift; sourceTree = "<group>"; };
 		C6A78B7320E6A4AD0034F7D6 /* DevClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A78B7520E6A4AD0034F7D6 /* CodeClickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeClickerTests.swift; sourceTree = "<group>"; };
 		C6A78B7720E6A4AD0034F7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6A78B7D20E711B00034F7D6 /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = coders_crux.ttf; sourceTree = "<group>"; };
 		C6A78B7E20E711B10034F7D6 /* nokiafc22.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nokiafc22.ttf; sourceTree = "<group>"; };
 		C6A78B8520E719BF0034F7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceServices.swift; sourceTree = "<group>"; };
 		DC927F400D6A2B0FDE8ADD6C /* Pods_DevClicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevClicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,25 +240,20 @@
 		2200676D20E48D7000A66BA6 /* DevClicker Watch App Extension */ = {
 			isa = PBXGroup;
 			children = (
-				22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */,
-				22221FA720E724B60097990D /* Views */,
+				C60E8C8820ED280900433868 /* App Media */,
+				C60E8C8720ED274600433868 /* App Support */,
+				22221FA720E724B60097990D /* Row Controllers */,
 				2256124D20E6477300424840 /* Interface Controllers */,
-				2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */,
-				2200677220E48D7000A66BA6 /* NotificationController.swift */,
-				2200677420E48D7000A66BA6 /* ComplicationController.swift */,
-				2200677620E48D7100A66BA6 /* Assets.xcassets */,
-				2200677820E48D7100A66BA6 /* Info.plist */,
-				2200677920E48D7100A66BA6 /* PushNotificationPayload.apns */,
 			);
 			path = "DevClicker Watch App Extension";
 			sourceTree = "<group>";
 		};
-		22221FA720E724B60097990D /* Views */ = {
+		22221FA720E724B60097990D /* Row Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				22221FA520E724A30097990D /* UpgradesTableRowController.swift */,
 			);
-			name = Views;
+			name = "Row Controllers";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -277,10 +270,10 @@
 		2256124D20E6477300424840 /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2200676E20E48D7000A66BA6 /* LeftInterfaceController.swift */,
-				2200678520E4959300A66BA6 /* MiddleInterfaceController.swift */,
-				2200678720E564A600A66BA6 /* RightInterfaceController.swift */,
-				229004A320E6C3CF00C04776 /* MarketInterfaceController.swift */,
+				2200676E20E48D7000A66BA6 /* CodeInterfaceController.swift */,
+				2200678520E4959300A66BA6 /* MainInterfaceController.swift */,
+				2200678720E564A600A66BA6 /* UpgradesInterfaceController.swift */,
+				229004A320E6C3CF00C04776 /* MarketingInterfaceController.swift */,
 			);
 			path = "Interface Controllers";
 			sourceTree = "<group>";
@@ -297,6 +290,7 @@
 		C60E383D20E02F790091B073 /* App Support */ = {
 			isa = PBXGroup;
 			children = (
+				22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */,
 				C6640E7320DF204F00EAB7EE /* Info.plist */,
 				C6640E6720DF204E00EAB7EE /* AppDelegate.swift */,
 				C65D5F7020E0C1BB00E69339 /* Notes.swift */,
@@ -323,6 +317,24 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		C60E8C8720ED274600433868 /* App Support */ = {
+			isa = PBXGroup;
+			children = (
+				22F41AAC20E5FAD5001FCFDA /* DevClicker Watch App Extension.entitlements */,
+				2200677020E48D7000A66BA6 /* ExtensionDelegate.swift */,
+				2200677820E48D7100A66BA6 /* Info.plist */,
+			);
+			path = "App Support";
+			sourceTree = "<group>";
+		};
+		C60E8C8820ED280900433868 /* App Media */ = {
+			isa = PBXGroup;
+			children = (
+				2200677620E48D7100A66BA6 /* Assets.xcassets */,
+			);
+			path = "App Media";
+			sourceTree = "<group>";
+		};
 		C61B4CCB20E2C12F007CB091 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,9 +355,9 @@
 			isa = PBXGroup;
 			children = (
 				C6640E6620DF204E00EAB7EE /* DevClicker */,
-				2200675E20E48D6F00A66BA6 /* DevClicker Watch App */,
 				2256121B20E620CE00424840 /* Shared */,
 				2200676D20E48D7000A66BA6 /* DevClicker Watch App Extension */,
+				2200675E20E48D6F00A66BA6 /* DevClicker Watch App */,
 				C6A78B7420E6A4AD0034F7D6 /* DevClickerTests */,
 				C6640E6520DF204E00EAB7EE /* Products */,
 				911A1A7E9E0048BDD28A9BC2 /* Pods */,
@@ -367,7 +379,6 @@
 		C6640E6620DF204E00EAB7EE /* DevClicker */ = {
 			isa = PBXGroup;
 			children = (
-				22F41AAA20E5FA36001FCFDA /* DevClicker.entitlements */,
 				C60E383D20E02F790091B073 /* App Support */,
 				C6640E8120DF5CB200EAB7EE /* App Media */,
 				C6640E7D20DF564F00EAB7EE /* Database */,
@@ -394,8 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				C61B4CCB20E2C12F007CB091 /* Cells */,
-				C6640E7020DF204F00EAB7EE /* LaunchScreen.storyboard */,
 				C6640E6B20DF204E00EAB7EE /* Main.storyboard */,
+				C6640E7020DF204F00EAB7EE /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -407,7 +418,7 @@
 				C60E383B20E02DD90091B073 /* MarketServices.swift */,
 				C61B4CB920E1B4BC007CB091 /* CodeServices.swift */,
 				C61B4CC820E29B5D007CB091 /* UpgradeServices.swift */,
-				C6A78B6D20E69F740034F7D6 /* UIServices.swift */,
+				C6A78B6D20E69F740034F7D6 /* iosUIServices.swift */,
 				22221FA320E71D8F0097990D /* WatchUIServices.swift */,
 			);
 			path = Services;
@@ -417,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				2256124920E62FAA00424840 /* WatchSessionManager.swift */,
+				C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */,
 				C60E384320E096440091B073 /* UserDefaultsPersistence.swift */,
 			);
 			path = Persistence;
@@ -725,28 +737,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2200677320E48D7000A66BA6 /* NotificationController.swift in Sources */,
-				2200678620E4959300A66BA6 /* MiddleInterfaceController.swift in Sources */,
+				C60E8C8420ED203600433868 /* PersistenceServices.swift in Sources */,
+				2200678620E4959300A66BA6 /* MainInterfaceController.swift in Sources */,
 				22F41AA020E5DD33001FCFDA /* ProductionData.swift in Sources */,
-				2200678820E564A600A66BA6 /* RightInterfaceController.swift in Sources */,
-				22F41A9C20E5CFA4001FCFDA /* AppShared.swift in Sources */,
+				2200678820E564A600A66BA6 /* UpgradesInterfaceController.swift in Sources */,
 				22F41AA120E5DD36001FCFDA /* MarketData.swift in Sources */,
-				2200677520E48D7000A66BA6 /* ComplicationController.swift in Sources */,
 				22F41AA620E5DD51001FCFDA /* MarketServices.swift in Sources */,
 				22F41AA820E5DD56001FCFDA /* UpgradeServices.swift in Sources */,
 				2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */,
+				C60E8C8520ED263B00433868 /* AppShared.swift in Sources */,
 				22221FA420E71D8F0097990D /* WatchUIServices.swift in Sources */,
 				22F41AA520E5DD4E001FCFDA /* PlayerActionsServices.swift in Sources */,
-				229004A520E6C92900C04776 /* UIServices.swift in Sources */,
+				229004A520E6C92900C04776 /* iosUIServices.swift in Sources */,
 				2256124C20E638E400424840 /* Game.swift in Sources */,
 				22F41AA220E5DD38001FCFDA /* Upgrade.swift in Sources */,
 				2200677120E48D7000A66BA6 /* ExtensionDelegate.swift in Sources */,
 				22F41A9F20E5DD30001FCFDA /* PlayerData.swift in Sources */,
 				2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */,
-				229004A420E6C3CF00C04776 /* MarketInterfaceController.swift in Sources */,
+				229004A420E6C3CF00C04776 /* MarketingInterfaceController.swift in Sources */,
 				22F41AA720E5DD54001FCFDA /* CodeServices.swift in Sources */,
 				22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */,
-				2200676F20E48D7000A66BA6 /* LeftInterfaceController.swift in Sources */,
+				2200676F20E48D7000A66BA6 /* CodeInterfaceController.swift in Sources */,
 				22F41A9E20E5DD2D001FCFDA /* GameData.swift in Sources */,
 				22F41AA320E5DD3F001FCFDA /* ExponentialOperator.swift in Sources */,
 			);
@@ -757,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6640E8020DF56CF00EAB7EE /* PlayerData.swift in Sources */,
+				C6E1F0EB20ED1E2900CE5FD8 /* PersistenceServices.swift in Sources */,
 				C60E384920E0A34D0091B073 /* ViewControllerFactory.swift in Sources */,
 				C6640E6A20DF204E00EAB7EE /* CodingViewController.swift in Sources */,
 				C61B4CCD20E2C153007CB091 /* UpgradesTableViewCell.swift in Sources */,
@@ -777,7 +789,7 @@
 				22A3BD4720E6F4F300717436 /* WatchSessionManager.swift in Sources */,
 				C60E383A20E02DCD0091B073 /* PlayerActionsServices.swift in Sources */,
 				C65D5F6F20E0B9D200E69339 /* ExponentialOperator.swift in Sources */,
-				C6A78B6E20E69F740034F7D6 /* UIServices.swift in Sources */,
+				C6A78B6E20E69F740034F7D6 /* iosUIServices.swift in Sources */,
 				C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */,
 				C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */,
 			);
@@ -843,10 +855,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/DevClicker Watch App Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/App Support/DevClicker Watch App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMM2SSNKR5;
-				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
+				INFOPLIST_FILE = "DevClicker Watch App Extension/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -867,10 +879,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/DevClicker Watch App Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DevClicker Watch App Extension/App Support/DevClicker Watch App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMM2SSNKR5;
-				INFOPLIST_FILE = "DevClicker Watch App Extension/Info.plist";
+				INFOPLIST_FILE = "DevClicker Watch App Extension/App Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1045,7 +1057,7 @@
 			baseConfigurationReference = 3EF61D4390EF77A8BE175A24 /* Pods-DevClicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DevClicker/DevClicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "DevClicker/App Support/DevClicker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMM2SSNKR5;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";
@@ -1065,7 +1077,7 @@
 			baseConfigurationReference = 1F337EEB6B253E71C602FC05 /* Pods-DevClicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DevClicker/DevClicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "DevClicker/App Support/DevClicker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMM2SSNKR5;
 				INFOPLIST_FILE = "$(SRCROOT)/DevClicker/App Support/Info.plist";

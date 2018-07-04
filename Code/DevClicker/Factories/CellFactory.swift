@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Enum containing cell identifiers
 public enum CellType: String {
     case upgrade = "UpgradeCell"
 }
@@ -15,6 +16,7 @@ public enum CellType: String {
 // swiftlint:disable force_cast
 class CellFactory {
 
+    /// Instantiates a cell from given table view and type
     static func upgradeCell(tableView: UITableView, upgrade: Upgrade) -> UpgradesTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellType.upgrade.rawValue) as! UpgradesTableViewCell
 

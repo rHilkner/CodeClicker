@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class RightInterfaceController: WKInterfaceController {
+class UpgradesInterfaceController: WKInterfaceController {
 
     @IBOutlet var locLabel: WKInterfaceLabel!
     @IBOutlet var dolLabel: WKInterfaceLabel!
@@ -62,12 +62,12 @@ class RightInterfaceController: WKInterfaceController {
 
 }
 
-extension RightInterfaceController: GameDelegate {
+extension UpgradesInterfaceController: GameDelegate {
     
     func updateStats() {
         let playerStats = AppShared.game.gameStats.playerStats
         
-        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dols)))
+        self.dolLabel.setText(String(WatchUIServices.dolStringFormat(dol: playerStats.dol)))
         self.locLabel.setText(String(WatchUIServices.locStringFormat(loc: playerStats.loc)))
     }
 }

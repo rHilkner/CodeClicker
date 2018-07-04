@@ -10,6 +10,7 @@ import Foundation
 
 class UpgradeServices {
 
+    /// Buy and apply upgrade benefits (or losses) to the player stats
     static func buy(upgrade: Upgrade) -> Bool {
         let upgradesAvailable = AppShared.game.gameStats.upgradesAvailable
 
@@ -27,14 +28,14 @@ class UpgradeServices {
         var productionStats = AppShared.game.gameStats.productionStats
         var marketStats = AppShared.game.gameStats.marketStats
 
-        if playerStats.dols < (upgrade.dolCost ?? 0) ||
+        if playerStats.dol < (upgrade.dolCost ?? 0) ||
             playerStats.loc < (upgrade.locCost ?? 0) {
             print("-> INFO: Player doesn't have enough dol or loc to buy the upgrade")
             return false
         }
 
         // Discounting dol and loc from player
-        playerStats.dols -= upgrade.dolCost ?? 0
+        playerStats.dol -= upgrade.dolCost ?? 0
         playerStats.loc -= upgrade.locCost ?? 0
 
         // Calculating production and market upgrades
