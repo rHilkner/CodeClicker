@@ -20,7 +20,6 @@
 		22221FA620E724A30097990D /* UpgradesTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221FA520E724A30097990D /* UpgradesTableRowController.swift */; };
 		2248014E20ED29A600430B8D /* UIServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248014D20ED29A600430B8D /* UIServicesProtocol.swift */; };
 		2248014F20ED29AC00430B8D /* UIServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248014D20ED29A600430B8D /* UIServicesProtocol.swift */; };
-		2248015020ED29B400430B8D /* IosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* IosUIServices.swift */; };
 		2256124A20E62FAA00424840 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256124920E62FAA00424840 /* WatchSessionManager.swift */; };
 		2256124B20E638E200424840 /* UserDefaultsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384320E096440091B073 /* UserDefaultsPersistence.swift */; };
 		2256124C20E638E400424840 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384120E046590091B073 /* Game.swift */; };
@@ -52,6 +51,7 @@
 		C60E8C8420ED203600433868 /* PersistenceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1F0EA20ED1E2900CE5FD8 /* PersistenceServices.swift */; };
 		C60E8C8520ED263B00433868 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E383E20E02FA40091B073 /* AppShared.swift */; };
 		C60E8C8A20ED328700433868 /* RowControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E8C8920ED328700433868 /* RowControllerFactory.swift */; };
+		C60E8C8C20ED38E100433868 /* IosUIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A78B6D20E69F740034F7D6 /* IosUIServices.swift */; };
 		C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CB920E1B4BC007CB091 /* CodeServices.swift */; };
 		C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBB20E1B548007CB091 /* ProductionData.swift */; };
 		C61B4CBF20E2851E007CB091 /* UpgradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B4CBE20E2851E007CB091 /* UpgradesViewController.swift */; };
@@ -776,6 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E8C8C20ED38E100433868 /* IosUIServices.swift in Sources */,
 				C6640E8020DF56CF00EAB7EE /* PlayerData.swift in Sources */,
 				C6E1F0EB20ED1E2900CE5FD8 /* PersistenceServices.swift in Sources */,
 				C60E384920E0A34D0091B073 /* ViewControllerFactory.swift in Sources */,
@@ -799,7 +800,6 @@
 				C60E383A20E02DCD0091B073 /* PlayerActionsServices.swift in Sources */,
 				2248014E20ED29A600430B8D /* UIServicesProtocol.swift in Sources */,
 				C65D5F6F20E0B9D200E69339 /* ExponentialOperator.swift in Sources */,
-				2248015020ED29B400430B8D /* IosUIServices.swift in Sources */,
 				C61B4CBA20E1B4BC007CB091 /* CodeServices.swift in Sources */,
 				C61B4CBC20E1B548007CB091 /* ProductionData.swift in Sources */,
 			);
